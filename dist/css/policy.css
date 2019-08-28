@@ -41,7 +41,8 @@
   .section__policy a {
     text-decoration-line: underline;
     color: #958FB2;
-    font-size: 16px; }
+    font-size: 16px;
+    word-break: break-word; }
     .section__policy a:hover {
       color: #F4F2FF; }
 
@@ -171,7 +172,17 @@
   width: 100%;
   margin: 40px 0;
   position: relative;
-  overflow-x: visible; }
+  overflow-x: visible;
+  /* width */
+  /* Track */
+  /* Handle */ }
+  .policy__table ::-webkit-scrollbar {
+    width: 10px; }
+  .policy__table ::-webkit-scrollbar-track {
+    border-radius: 10px; }
+  .policy__table ::-webkit-scrollbar-thumb {
+    background: rgba(72, 66, 102, 0.2);
+    border-radius: 10px; }
   .policy__table table {
     border-collapse: collapse;
     border-spacing: 1px;
@@ -179,13 +190,19 @@
     width: 892px;
     max-width: 100%;
     position: relative;
-    overflow-y: auto; }
+    overflow-y: auto;
+    scroll-behavior: smooth; }
   .policy__table th, .policy__table td {
-    font-family: Lato;
+    font-family: 'Lato';
     font-weight: normal;
     font-size: 14px;
     line-height: 20px;
     color: #958FB2; }
+  .policy__table tr td:first-of-type,
+  .policy__table tr td:nth-of-type(3) {
+    white-space: nowrap; }
+  .policy__table tr td:nth-of-type(3) {
+    min-width: 220px; }
   .policy__table th {
     color: #F4F2FF;
     padding: 15px;
@@ -198,6 +215,7 @@
     padding: 11px 15px;
     border: 1px solid #484266; }
   .policy__table .table__wrapper {
+    scroll-behavior: smooth;
     position: relative;
     max-width: initial;
     overflow-x: visible;
