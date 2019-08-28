@@ -140,7 +140,8 @@
   padding-left: 48px; }
   @media only screen and (max-width: 1024px) {
     .policy__container {
-      padding-left: 56px; } }
+      padding-left: 56px;
+      border-left: 1px solid transparent; } }
   @media only screen and (max-width: 479px) {
     .policy__container {
       padding-left: 43px; } }
