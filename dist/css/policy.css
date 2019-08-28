@@ -23,7 +23,8 @@
     list-style-position: inside; }
   .section__policy li {
     margin-bottom: 3px;
-    line-height: 22px; }
+    line-height: 22px;
+    min-height: 32px; }
   .section__policy .list__padding {
     margin-top: 0; }
     .section__policy .list__padding strong {
