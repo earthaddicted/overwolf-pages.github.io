@@ -1,0 +1,11 @@
+{
+	"scripts": {
+		"stylelint": "stylelint '**/*.scss'; exit 0"
+	},
+
+	"plugins": [
+		"stylelint-scss"
+	],
+
+	"extends": "stylelint-config-recommended"
+}

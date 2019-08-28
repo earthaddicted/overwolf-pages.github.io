@@ -1,0 +1,31 @@
+
+html {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-width: 320px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+body * {
+    box-sizing: border-box;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    -ms-flex-pack: center;
+    justify-content: center;
+    flex: 1 0 auto;
+}
+
+@import '../scss_components/vars';
+@import '../scss_components/global';
+@import '../scss_components/basic_template/basic_template';

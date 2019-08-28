@@ -1,0 +1,39 @@
+// resets
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+button {
+    border: none;
+    font-family: inherit;
+
+    &:focus {
+        outline: none;
+    }
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+    transition: .1s ease-in-out;
+}
+
+b, strong {
+    font-weight: bold;
+}
+
+// texts
+body {
+    font-family: 'Lato', sans-serif;
+    line-height: normal;
+}
+
+h1 {
+    line-height: 133.333333%;
+}

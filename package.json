@@ -1,0 +1,38 @@
+{
+	"name": "DevChallenge",
+	"version": "1.0.0",
+	"description": "DevChallenge HTML+CSS",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"start": "gulp",
+		"build": "gulp build"
+	},
+	"author": "",
+	"license": "ISC",
+	"devDependencies": {
+		"autoprefixer": "^8.6.3",
+		"browser-sync": "^2.24.7",
+		"del": "^3.0.0",
+		"gulp": "github:gulpjs/gulp#v4.0.0-alpha.3",
+		"gulp-concat": "^2.6.1",
+		"gulp-imagemin": "^4.1.0",
+		"gulp-pug": "^4.0.1",
+		"gulp-sass": "^3.2.1",
+		"gulp-stylelint": "^9.0.0",
+		"stylelint": "^10.0.1",
+		"stylelint-config-recommended": "^2.2.0",
+		"stylelint-config-recommended-scss": "^3.3.0",
+		"stylelint-scss": "^3.6.0"
+	},
+	"dependencies": {
+		"gulp-cache": "^1.0.2",
+		"gulp-cssnano": "^2.1.3",
+		"gulp-group-css-media-queries": "^1.2.2",
+		"gulp-plumber": "^1.2.0",
+		"gulp-rename": "^1.4.0",
+		"gulp-scss": "^1.4.0",
+		"gulp-uglifyjs": "^0.6.2",
+		"imagemin-pngquant": "^6.0.0"
+	}
+}
