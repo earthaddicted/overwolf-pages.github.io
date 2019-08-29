@@ -96,10 +96,7 @@
 
         @media only screen and (max-width: 1024px) {
             flex-direction: column;
-        }
-
-        @media only screen and (max-width: 600px) {
-            padding-top: 54px !important;
+            padding-top: 0 !important;
         }
     }
 
