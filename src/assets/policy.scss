@@ -3,7 +3,6 @@
 .section__policy {
     align-items: flex-start;
     height: unset;
-    padding-top: 66px;
 
     @media only screen and (max-width: 1024px) {
         padding-top: 10px;
@@ -27,10 +26,10 @@
         font-size: 18px;
     }
 
-    //ul,
-    //ol {
-    //    list-style-position: inside;
-    //}
+    ul,
+    ol {
+        list-style-position: inside;
+    }
 
     p + ol {
         //margin-top: -11px;
@@ -62,10 +61,10 @@
         }
     }
 
-    ol li {
-        margin-left: 25px;
-        padding-left: 20px;
-    }
+    //ol li {
+    //    margin-left: 25px;
+    //    padding-left: 20px;
+    //}
 
     p {
         padding: 12px 0;
