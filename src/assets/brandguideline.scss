@@ -2,10 +2,10 @@
 
 .page__brand {
     .section:first-of-type .section__wrapper {
-        padding-top: 124px;
+        padding-top: 60px;
 
         @media only screen and (max-width: 1024px) {
-            padding-top: 70px;
+            padding-top: 11px;
             padding-bottom: 36px;
         }
 
@@ -30,9 +30,13 @@
         background-image: url('../img/guideline/lightning_large.svg');
         background-repeat: no-repeat;
         background-repeat: no-repeat;
-        background-position: 46% 33%;
+        background-position: 46% 46%;
         background-size: 466px;
         z-index: 1;
+
+        @media only screen and (max-width: 812px) {
+            background-position: 76% 46%;
+        }
 
         @media only screen and (max-width: 600px) {
             background-position: 175px -44px;
@@ -61,7 +65,7 @@
 
             @media only screen and (max-width: 1024px) {
                 max-width: 674px;
-                padding-top: 71px;
+                padding-top: 80px;
 
                 .section__wrapper:first-of-type {
                     max-width: 1255px;
@@ -153,7 +157,7 @@
 
             @media only screen and (max-width: 812px) {
                 flex-direction: column;
-                max-width: 554px;
+                max-width: 555px;
             }
         }
 
@@ -164,7 +168,7 @@
 
             @media only screen and (max-width: 1024px) {
                 max-width: 100%;
-                margin-top: 8px;
+                margin-top: 20px;
             }
 
             @media only screen and (max-width: 480px) {
@@ -265,7 +269,7 @@
         &-block {
             display: flex;
             width: 100%;
-            max-width: 1136px;
+            max-width: 916px;
             //justify-content: flex-start;
             justify-content: space-between;
             margin: 26px 0;
