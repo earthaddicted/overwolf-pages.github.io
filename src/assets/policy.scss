@@ -49,14 +49,17 @@
 
         li {
             &::before {
-                margin-right: 3px;
+                //margin-right: 3px;
+                position: absolute;
+                margin-left: -25px;
                 content: "•";
                 color: $purpleWhite;
             }
         }
     }
 
-    ol li {
+    ol li,
+    ul li {
         margin-left: 25px;
         padding-left: 20px;
     }
