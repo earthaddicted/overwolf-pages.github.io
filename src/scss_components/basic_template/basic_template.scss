@@ -249,7 +249,7 @@ body {
         .btn__hamburger {
             z-index: 1;
             display: block;
-            margin: 12px 16px;
+            margin: 9px 16px;
             margin-left: auto;
             background: transparent;
             width: 32px;
@@ -320,7 +320,7 @@ body {
             z-index: 1;
 
             > a > svg {
-                margin: 12px 16px;
+                margin: 8px 16px 13px;
             }
         }
 
@@ -561,6 +561,10 @@ header.bg__color {
             @media only screen and (max-width: 1024px) {
                 grid-gap: 32px 23px;
             }
+
+            @media only screen and (max-width: 600px) {
+                grid-gap: 21px 23px;
+            }
         }
     }
 }
@@ -645,6 +649,12 @@ main {
     .footer__wrapper {
          h5 {
             margin-bottom: 20px;
+        }
+
+        > ul {
+            @media only screen and (max-width: 1024px) {
+                grid-gap: 28px 22px;
+            }
         }
 
         >ul>li a {

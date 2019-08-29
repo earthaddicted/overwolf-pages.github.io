@@ -7,10 +7,25 @@
     .section:first-of-type .section__wrapper {
         padding-top: 80px;
         padding-bottom: 22px;
+
+        @media only screen and (max-width: 1024px) {
+            padding-top: 50px;
+            padding-bottom: 45px;
+        }
     }
+
 
     .section__wrapper {
         padding: 80px 56px 56px;
+
+        @media only screen and (max-width: 1024px) {
+            padding-top: 60px;
+        }
+
+        @media only screen and (max-width: 600px) {
+            padding-top: 40px;
+            padding-bottom: 65px;
+        }
     }
 
 }
@@ -40,6 +55,14 @@
     max-width: 840px;
     padding: 29px 0 17px;
 
+    @media only screen and (max-width: 1024px) {
+        max-width: 650px;
+    }
+
+    @media only screen and (max-width: 600px) {
+        max-width: 440px;
+    }
+
     &-item {
         display: flex;
         align-items: center;
@@ -62,6 +85,14 @@
     max-width: 654px;
     padding-top: 30px;
     text-align: center;
+
+    @media only screen and (max-width: 1024px) {
+        padding-top: 24px;
+    }
+
+    @media only screen and (max-width: 600px) {
+        padding-top: 27px;
+    }
 }
 
 .contact__email {
@@ -79,8 +110,8 @@
         margin: 33px 20px 13px 36px;
     }
 
-    @media only screen and (max-width: 480px) {
-        margin: 64px 20px 14px 36px;
+    @media only screen and (max-width: 600px) {
+        margin: 80px 20px 8px;
     }
 
     &::before {
@@ -136,6 +167,7 @@
 
     @media only screen and (max-width: 1060px) {
         justify-content: center;
+        padding: 34px 0;
     }
 
     @media only screen and (max-width: 480px) {
@@ -153,11 +185,11 @@
     text-align: center;
 
     @media only screen and (max-width: 1024px) {
-        margin: 29px 20px 32px;
+        margin: 26px 20px 26px;
     }
 
-    @media only screen and (max-width: 480px) {
-        margin: 20px 20px 30px;
+    @media only screen and (max-width: 600px) {
+        margin: 22px 20px 17px;
     }
 
 
