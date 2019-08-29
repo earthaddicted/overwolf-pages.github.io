@@ -26,10 +26,10 @@
         font-size: 18px;
     }
 
-    ul,
-    ol {
-        list-style-position: inside;
-    }
+    //ul,
+    //ol {
+    //    list-style-position: inside;
+    //}
 
     p + ol {
         //margin-top: -11px;
@@ -61,10 +61,10 @@
         }
     }
 
-    //ol li {
-    //    margin-left: 25px;
-    //    padding-left: 20px;
-    //}
+    ol li {
+        margin-left: 25px;
+        padding-left: 20px;
+    }
 
     p {
         padding: 12px 0;
