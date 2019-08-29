@@ -60,17 +60,17 @@ const HeaderManager = (function () {
 const headerManager = new HeaderManager(overlayManager);
 
 
-(function () {
-    var pageName = document.querySelector('.page__single');
-    var header = document.querySelector('header');
-
-    if (pageName) {
-        header.classList.add('fixed');
-        header.classList.add('bg__color');
-    } else {
-        header.classList.add('bg__color');
-    }
-})();
+// (function () {
+//     var pageName = document.querySelector('.page__single');
+//     var header = document.querySelector('header');
+//
+//     if (pageName) {
+//         header.classList.add('fixed');
+//         header.classList.add('bg__color');
+//     } else {
+//         header.classList.add('bg__color');
+//     }
+// })();
 
 (function() {
     var header = document.querySelector('header');
