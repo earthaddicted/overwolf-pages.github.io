@@ -3,24 +3,31 @@ const HeaderManager = (function () {
     const mobileMenu = document.getElementById("mobile-menu");
     const submenuParents = document.querySelectorAll("#mobile-menu li.submenu-parent");
     let overlay;
-    
-    function HeaderManager(overlayArg) {                
+
+    function HeaderManager(overlayArg) {
         overlay = overlayArg;
         registerEvents();
     }
 
-    const registerEvents = function() {
-        hamburgerButton.onclick = () => { 
+    const registerEvents = function () {
+        hamburgerButton.onclick = () => {
             if (hamburgerButton.classList.contains("close")) {
                 hideMobileMenu();
             } else {
                 showMobileMenu();
             }
         };
-        
+
         // Submenu clicks
         for (let submenuParent of submenuParents) {
-            submenuParent.getElementsByTagName("a")[0].onclick = () => { toggleSubmenu(submenuParent); };
+            submenuParent.getElementsByTagName("a")[0].onclick = () => {
+                if (!isSubmenuActive(submenuParent)) {
+                    submenuParents.forEach(function (currentSubmenuParent) {
+                        hideSubmenu(currentSubmenuParent);
+                    });
+                }
+                toggleSubmenu(submenuParent);
+            };
         }
 
         overlay.addShouldCloseOverlaysListener(() => {
@@ -28,14 +35,14 @@ const HeaderManager = (function () {
         });
     }
 
-    const showMobileMenu = function() {
+    const showMobileMenu = function () {
         overlay.invokeShouldCloseOverlays();
         mobileMenu.classList.add("active");
         overlay.showOverlay();
         hamburgerButton.classList.add("close");
     };
 
-    const hideMobileMenu = function() {
+    const hideMobileMenu = function () {
         mobileMenu.classList.remove("active");
         overlay.hideOverlay();
         for (let submenuParent of submenuParents) {
@@ -44,15 +51,22 @@ const HeaderManager = (function () {
         hamburgerButton.classList.remove("close");
     };
 
-    const toggleSubmenu = function(submenuParent) {
-        const submenu = submenuParent.getElementsByClassName("submenu")[0];
-        submenu.classList.toggle("active");
-    }
+    const isSubmenuActive = function (submenuParent) {
+        // const submenu = submenuParent.getElementsByClassName("submenu")[0];
+        return submenuParent.classList.contains("active");
+    };
 
-    const hideSubmenu = function(submenuParent) {
-        const submenu = submenuParent.getElementsByClassName("submenu")[0];
-        submenu.classList.remove("active");
-    }
+    const toggleSubmenu = function (submenuParent) {
+        // const submenu = submenuParent.getElementsByClassName("submenu")[0];
+        submenuParent.classList.toggle("active");
+    };
+
+    const hideSubmenu = function (submenuParent) {
+        // const submenu = submenuParent.getElementsByClassName("submenu")[0];
+        submenuParent.classList.remove("active");
+    };
+
+
 
     return HeaderManager;
 }());
@@ -72,7 +86,7 @@ const headerManager = new HeaderManager(overlayManager);
 //     }
 // })();
 
-(function() {
+(function () {
     var header = document.querySelector('header');
     //
     // window.scroll(function() {
