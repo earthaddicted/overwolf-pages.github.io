@@ -1,0 +1,162 @@
+@import '../scss_components/vars';
+
+.section__about {
+    align-items: flex-start;
+    height: unset;
+
+    h1,
+    h2,
+    h3 {
+        font-family: 'Lato';
+        font-style: normal;
+        font-weight: normal;
+        color: $purpleWhite;
+    }
+
+    h1,
+    h2 {
+        line-height: 48px;
+        font-size: 36px;
+    }
+
+    h3 {
+        font-size: 20px;
+        line-height: 26px;
+    }
+
+    &-intro {
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        height: 100%;
+        background-image: url('../img/about/Stars.png');
+        background-repeat: no-repeat;
+
+        .section__wrapper {
+            padding-top: 120px;
+            padding-bottom: 240px;
+        }
+
+        .img__mob {
+            display: none;
+            @media only screen and (max-width: 1024px) {
+                display: block;
+            }
+        }
+
+        .img__desktop {
+            @media only screen and (max-width: 1024px) {
+                display: none;
+            }
+
+        }
+    }
+}
+
+.section__wrapper__start {
+    align-items: flex-start;
+}
+.page__about {
+    .section__wrapper {
+        max-width: 1250px;
+        position: relative;
+    }
+
+    .section__about-intro {
+        .section__wrapper {
+            padding-top: 122px;
+        }
+    }
+
+    .block__text-half {
+        max-width: 516px;
+        padding: 0 20px 0 0;
+
+        h1,
+        h2 {
+            padding-bottom: 26px;
+        }
+
+         p {
+             padding: 10px 0;
+             font-family: 'Lato';
+             font-weight: normal;
+             font-size: 18px;
+             line-height: 24px;
+         }
+    }
+}
+
+.section__about {
+    &-gamers {
+        .section__wrapper {
+            padding-top: 178px;
+            padding-bottom: 155px;
+        }
+    }
+
+    &-info {
+        background: #201C33;
+
+        .section__wrapper {
+            padding-top: 134px;
+        }
+    }
+}
+
+.about__info {
+    &-block {
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+        max-width: 1206px;
+        padding: 42px 0 0;
+    }
+
+    &-item {
+        display: block;
+        width: 100%;
+        max-width: 280px;
+        margin: 0 20px 50px;
+        text-align: center;
+
+        span {
+            display: block;
+            padding: 6px 0;
+            font-family: 'Lato';
+            font-weight: normal;
+            font-size: 18px;
+            line-height: 24px;
+
+            &:first-of-type {
+                color: $purpleWhite;
+            }
+
+            &:last-of-type {
+                color: $purpleGrey;
+            }
+        }
+    }
+
+    &-bg {
+        margin-bottom: 78px;
+    }
+}
+
+.about__user {
+
+}
+
+
+.about__img-intro {
+
+    &-bg {
+        position: absolute;
+        max-width: 799.62px;
+        width: 100%;
+        max-height: 891.62px;
+        height: 100%;
+        transform: translate(-91px, -21px);
+    }
+}
+

@@ -524,13 +524,27 @@ header.bg__color {
         border-top: solid 1px $purple33;
         font-size: 14px;
 
-        @media only screen and (max-width: 812px) {
-            max-width: 560px;
-            padding-bottom: 40px;
-        }
+        //@media only screen and (max-width: 812px) {
+        //    max-width: 560px;
+        //    padding-bottom: 40px;
+        //}
+
+        //.footer__wrapper {
+        //    h5 {
+        //        margin-bottom: 20px;
+        //    }
+
+            //> ul {
+            //
+            //}
+            //
+            //>ul>li a {
+            //    margin-bottom: 12px;
+            //}
 
         h5 {
-            margin-bottom: 24px;
+            //margin-bottom: 24px;
+            margin-bottom: 20px;
             font-family: 'Lato';
             font-weight: normal;
             font-size: 14px;
@@ -538,9 +552,14 @@ header.bg__color {
         }
 
         > ul {
+            @media only screen and (max-width: 1024px) {
+                grid-gap: 28px 22px;
+            }
+
             > li {
                 a {
-                    margin-bottom: 16px;
+                    //margin-bottom: 16px;
+                    margin-bottom: 12px;
                     display: block;
                     line-height: 20px;
                     font-family: 'Lato';

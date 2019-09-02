@@ -24,6 +24,11 @@
     h3 {
         padding: 31px 0 5px;
         font-size: 18px;
+        text-transform: lowercase;
+
+        &::first-letter {
+            text-transform: capitalize;
+        }
     }
 
     //ul,
@@ -173,6 +178,8 @@
         }
 
         &-ancor {
+            font-family: 'Lato', sans-serif;
+            font-weight: normal;
             display: flex;
             align-items: center;
             padding: 4px 0;
