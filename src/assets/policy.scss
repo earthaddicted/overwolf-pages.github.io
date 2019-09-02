@@ -108,10 +108,14 @@
     }
 
     &__navigator {
-        min-width: 190px;
+        min-width: 183px;
         max-width: 190px;
-        margin: 17px 20px 0 0;
+        margin: 0 8px;
         list-style: none !important;
+
+        @media only screen and (max-width: 1440px) {
+            margin: 17px 8px 0 16px;
+        }
 
         @media only screen and (max-width: 1024px) {
             display: flex;
@@ -132,7 +136,7 @@
 
         &-item {
             padding-left: 0 !important;
-            margin: 20px 13px 0 0 !important;
+            margin: 0 13px 18px 0!important;
             //padding: 2.5px 13px;
             border-left: 2px solid transparent;
 
@@ -230,7 +234,7 @@
         }
 
         &-title {
-            margin-bottom: 18px;
+            margin-bottom: 23px;
 
             span {
                 font-size: 14px;

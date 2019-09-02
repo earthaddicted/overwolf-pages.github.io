@@ -399,7 +399,7 @@ body {
                 }
 
                 &.active {
-                    color: $purpleF4;
+                    //color: $purpleF4;
 
                     svg.icon_drop-down {
                         transform: rotate(180deg) translateY(0%);
@@ -783,6 +783,10 @@ h2 {
 
 .strong__light {
     font-weight: bold;
+    color: $purpleWhite;
+}
+
+.light-text {
     color: $purpleWhite;
 }
 
