@@ -461,20 +461,6 @@ body {
     }
 }
 
-//.header.fixed {
-//    position: fixed;
-//    transition: .1s ease-in-out;
-//    background: rgba(22, 19, 38, .9);
-//
-//    @media only screen and (max-width: 812px) {
-//        position: absolute;
-//    }
-//
-//    &.transparent {
-//        background: transparent;
-//    }
-//}
-
 header.bg__color {
     transition: .3s ease-in-out;
     background: rgba(22, 19, 38, 0.9);
@@ -622,10 +608,15 @@ header.bg__color {
     opacity: 0;
     transition: opacity .6s;
 
+
+
     &.active {
-        opacity: 1;
-        pointer-events: all;
-        z-index: 2;
+
+        @media only screen and (max-width: 812px) {
+            opacity: 1;
+            pointer-events: all;
+            z-index: 2;
+        }
     }
 }
 

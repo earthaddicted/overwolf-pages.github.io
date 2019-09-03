@@ -29,12 +29,12 @@
         justify-content: flex-start;
         align-items: flex-start;
         height: 100%;
-        background-image: url('../img/about/Stars.png');
+        background-image: url('../img/about/Stars.svg');
         background-repeat: no-repeat;
 
         .section__wrapper {
             padding-top: 120px;
-            padding-bottom: 240px;
+            padding-bottom: 175px;
         }
 
         .img__mob {
@@ -56,9 +56,10 @@
 .section__wrapper__start {
     align-items: flex-start;
 }
+
 .page__about {
     .section__wrapper {
-        max-width: 1250px;
+        max-width: 1175px;
         position: relative;
     }
 
@@ -74,7 +75,7 @@
 
         h1,
         h2 {
-            padding-bottom: 26px;
+            padding-bottom: 23px;
         }
 
          p {
@@ -90,8 +91,8 @@
 .section__about {
     &-gamers {
         .section__wrapper {
-            padding-top: 178px;
-            padding-bottom: 155px;
+            padding-top: 56px;
+            padding-bottom: 133px;
         }
     }
 
@@ -143,11 +144,6 @@
     }
 }
 
-.about__user {
-
-}
-
-
 .about__img-intro {
 
     &-bg {
@@ -156,7 +152,7 @@
         width: 100%;
         max-height: 891.62px;
         height: 100%;
-        transform: translate(-91px, -21px);
+        transform: translate(92px, -9px);
     }
 }
 
