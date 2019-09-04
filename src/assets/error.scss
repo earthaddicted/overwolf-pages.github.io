@@ -10,13 +10,9 @@
     }
 }
 
-.page__error {
-
-}
-
 .section__error {
     .section__wrapper {
-        padding: 36px;
+        padding: 36px !important;
 
         @media only screen and (max-width: 360px) {
             padding-top: 20px !important;

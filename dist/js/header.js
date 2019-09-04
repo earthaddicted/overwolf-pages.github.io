@@ -52,58 +52,19 @@ const HeaderManager = (function () {
     };
 
     const isSubmenuActive = function (submenuParent) {
-        // const submenu = submenuParent.getElementsByClassName("submenu")[0];
         return submenuParent.classList.contains("active");
     };
 
     const toggleSubmenu = function (submenuParent) {
-        // const submenu = submenuParent.getElementsByClassName("submenu")[0];
         submenuParent.classList.toggle("active");
     };
 
     const hideSubmenu = function (submenuParent) {
-        // const submenu = submenuParent.getElementsByClassName("submenu")[0];
         submenuParent.classList.remove("active");
     };
-
 
 
     return HeaderManager;
 }());
 
 const headerManager = new HeaderManager(overlayManager);
-
-
-// (function () {
-//     var pageName = document.querySelector('.page__single');
-//     var header = document.querySelector('header');
-//
-//     if (pageName) {
-//         header.classList.add('fixed');
-//         header.classList.add('bg__color');
-//     } else {
-//         header.classList.add('bg__color');
-//     }
-// })();
-
-(function () {
-    var header = document.querySelector('header');
-    //
-    // window.scroll(function() {
-    //     if (header.scrollTop() >= 300) {
-    //         header.classList.remove('absolute');
-    //     } else {
-    //         header.classList.add('absolute');
-    //     }
-    // });
-
-    // window.onscroll = function() {scrollFunction()};
-
-    // function scrollFunction() {
-    //     if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
-    //         document.querySelector('header').classList.remove('transparent');
-    //     } else {
-    //         document.querySelector('header').classList.add('transparent');
-    //     }
-    // }
-})();
