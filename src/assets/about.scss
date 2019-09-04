@@ -7,7 +7,7 @@
     h1,
     h2,
     h3 {
-        font-family: 'Lato';
+        font-family: 'Lato', sans-serif;
         font-style: normal;
         font-weight: normal;
         color: $purpleWhite;
@@ -39,13 +39,26 @@
 
         .img__mob {
             display: none;
-            @media only screen and (max-width: 1024px) {
+
+            @media only screen and (max-width: 480px) {
                 display: block;
             }
         }
 
+        .img__tablet {
+            display: none;
+
+            @media only screen and (max-width: 812px) {
+                display: block;
+            }
+
+            @media only screen and (max-width: 480px) {
+                display: none;
+            }
+        }
+
         .img__desktop {
-            @media only screen and (max-width: 1024px) {
+            @media only screen and (max-width: 812px) {
                 display: none;
             }
 
@@ -66,6 +79,19 @@
     .section__about-intro {
         .section__wrapper {
             padding-top: 122px;
+
+            @media only screen and (max-width: 812px) {
+                max-width: 762px;
+                padding-top: 68px;
+                padding-bottom: 43px;
+            }
+
+            @media only screen and (max-width: 600px) {
+                max-width: 416px;
+                margin: 0;
+                padding-top: 62px;
+                padding-bottom: 68px;
+            }
         }
     }
 
@@ -73,18 +99,28 @@
         max-width: 516px;
         padding: 0 20px 0 0;
 
+
+        @media only screen and (max-width: 812px) {
+            max-width: 430px;
+        }
+
         h1,
         h2 {
             padding-bottom: 23px;
+
+            @media only screen and (max-width: 812px) {
+                max-width: 370px;
+                padding-bottom: 15px;
+            }
         }
 
-         p {
-             padding: 10px 0;
-             font-family: 'Lato';
-             font-weight: normal;
-             font-size: 18px;
-             line-height: 24px;
-         }
+        p {
+            padding: 10px 0;
+            font-family: 'Lato', sans-serif;
+            font-weight: normal;
+            font-size: 18px;
+            line-height: 24px;
+        }
     }
 }
 
@@ -93,6 +129,23 @@
         .section__wrapper {
             padding-top: 56px;
             padding-bottom: 133px;
+
+            @media only screen and (max-width: 812px) {
+                max-width: 760px;
+                padding-top: 90px;
+                padding-bottom: 87px;
+            }
+
+            @media only screen and (max-width: 600px) {
+                padding-top: 60px;
+                padding-bottom: 80px;
+            }
+
+            .block__text-half p {
+                @media only screen and (max-width: 600px) {
+                    max-width: 300px;
+                }
+            }
         }
     }
 
@@ -100,8 +153,78 @@
         background: #201C33;
 
         .section__wrapper {
-            padding-top: 134px;
+            max-width: 1220px;
+            padding-top: 100px;
+            padding-bottom: 47px;
+
+            @media only screen and (max-width: 812px) {
+                max-width: 760px;
+                padding-top: 106px;
+                padding-bottom: 87px;
+            }
+
+            @media only screen and (max-width: 600px) {
+                padding-top: 75px;
+                padding-bottom: 35px;
+            }
+
+            > h2 {
+                padding-bottom: 14px;
+
+                @media only screen and (max-width: 812px) {
+                    padding-bottom: 0;
+                }
+            }
+
+            p {
+                max-width: 700px;
+
+                @media only screen and (max-width: 812px) {
+                    max-width: 570px;
+                }
+            }
         }
+    }
+
+    &-invest {
+        .section__wrapper {
+            max-width: 1246px;
+        }
+    }
+
+    &-join {
+        background: #201c33;
+
+        .section__wrapper {
+            max-width: 715px;
+            padding-top: 99px;
+            padding-bottom: 97px;
+
+            @media only screen and (max-width: 812px) {
+                max-width: 670px;
+                padding-top: 94px;
+            }
+
+            @media only screen and (max-width: 600px) {
+                padding-bottom: 67px;
+            }
+        }
+
+        h2 {
+
+            span {
+                color: $pink;
+            }
+        }
+
+        .btn__pink {
+            margin: 39px auto 0;
+
+            @media only screen and (max-width: 812px) {
+                margin-top: 19px;
+            }
+        }
+
     }
 }
 
@@ -124,7 +247,7 @@
         span {
             display: block;
             padding: 6px 0;
-            font-family: 'Lato';
+            font-family: 'Lato', sans-serif;
             font-weight: normal;
             font-size: 18px;
             line-height: 24px;
@@ -149,10 +272,151 @@
     &-bg {
         position: absolute;
         max-width: 799.62px;
-        width: 100%;
         max-height: 891.62px;
         height: 100%;
         transform: translate(92px, -9px);
+
+        @media only screen and (max-width: 812px) {
+            transform: translate(23px, 23px);
+            width: 100%;
+        }
+
+        @media only screen and (max-width: 480px) {
+            top: 447px;
+            right: -40px;
+            width: auto;
+        }
     }
 }
 
+.about__value {
+    &-block {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 20px;
+
+        @media only screen and (max-width: 812px) {
+            justify-content: space-evenly;
+            margin-top: 0;
+        }
+    }
+
+    &-item {
+        display: block;
+        width: 25%;
+        min-width: 230px;
+        max-width: 25%;
+        margin: 50px 0;
+        text-align: center;
+        box-sizing: border-box;
+
+        @media only screen and (max-width: 812px) {
+            margin: 50px 0 20px;
+        }
+
+        @media only screen and (max-width: 600px) {
+            margin-bottom: 7px;
+        }
+    }
+
+    &-img {
+        height: 89px;
+    }
+
+    &-title {
+        display: inline-block;
+        padding-top: 2px;
+        font-size: 18px;
+        line-height: 24px;
+        font-family: 'Lato', sans-serif;
+    }
+}
+
+.invest {
+    &__block {
+        display: flex;
+        padding: 46px 0;
+
+        @media only screen and (max-width: 812px) {
+            max-width: 556px;
+            flex-direction: column;
+            padding: 0;
+        }
+
+        a {
+            display: block;
+            color: $purpleWhite;
+            text-decoration: underline;
+
+            &:hover {
+                color: $purpleBlack;
+            }
+        }
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 50%;
+        padding: 30px 0 10px;
+
+        @media only screen and (max-width: 812px) {
+            width: 100%;
+            padding: 27px 0 50px;
+        }
+
+        @media only screen and (max-width: 600px) {
+            padding-top: 5px;
+        }
+
+        &:first-of-type {
+            border-right: 1px solid #332E4D;
+            padding-right: 94px;
+            max-width: 60%;
+
+            @media only screen and (max-width: 812px) {
+                max-width: 100%;
+                padding-right: 0;
+                border-right: 0 solid transparent;
+            }
+        }
+
+        &:last-of-type {
+            padding-left: 94px;
+
+            @media only screen and (max-width: 812px) {
+                padding-left: 0;
+            }
+        }
+
+        h3 {
+            font-weight: normal;
+            font-size: 20px;
+            line-height: 26px;
+            color: $purpleWhite;
+
+            @media only screen and (max-width: 812px) {
+                padding-bottom: 3px;
+            }
+        }
+
+        p {
+            font-size: 16px;
+        }
+    }
+
+    &__logo {
+        margin: 33px 0 0;
+
+        @media only screen and (max-width: 812px) {
+            margin: 39px auto 0;
+            text-align: center;
+        }
+
+        @media only screen and (max-width: 600px) {
+            margin: 19px auto 0;
+        }
+    }
+}
