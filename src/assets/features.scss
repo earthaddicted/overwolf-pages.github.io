@@ -1,0 +1,84 @@
+@import '../scss_components/vars';
+
+.page__features {
+
+    .btn {
+        &__pink,
+        &__transparent {
+            padding: 8px 12px;
+            border: 1px solid transparent;
+            margin: 8px;
+        }
+
+        &__transparent {
+            border: 1px solid #797399;
+        }
+    }
+
+}
+
+.section__features {
+    &-intro {
+        padding-top: 87px;
+        padding-bottom: 77px;
+
+        .section__wrapper {
+            position: relative;
+            max-width: 563px;
+
+            &::before {
+                content: '';
+                position: absolute;
+                top: 5px;
+                left: -70px;
+                width: 112px;
+                height: 165px;
+                background: url("../img/features/feature_decor_1.svg") 50% 50% no-repeat;
+            }
+
+            &::after {
+                content: '';
+                position: absolute;
+                right: -85px;
+                bottom: 0;
+                width: 112px;
+                height: 165px;
+                background: url("../img/features/feature_decor_2.svg") 50% 50% no-repeat;
+            }
+        }
+
+        //p {
+        //    max-width: 463px;
+        //}
+    }
+
+    &-info {
+
+    }
+
+    &-build {
+        .section__wrapper {
+            max-width: 470px;
+        }
+    }
+}
+
+h2 {
+
+    span {
+        color: $pink;
+    }
+}
+
+.btn__transparent {
+    font-size: 16px;
+    line-height: 145%;
+    color: #f4f2ff;
+    border: 1px solid #797399;
+    padding: 8px 16px;
+    background: transparent;
+
+    &:hover {
+        background: #332E4D;
+    }
+}

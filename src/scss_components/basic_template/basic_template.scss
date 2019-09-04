@@ -3,7 +3,7 @@
 @font-face {
     font-family: 'klavika', sans-serif;
     src: url('/system/modules/com.overwolf.website/resources/fonts/KlavikaBasic-Light.otf');
-    //src: url('../fonts/KlavikaBasic-Light.otf');
+    src: url('../fonts/KlavikaBasic-Light.otf');
     font-weight: 300;
     font-style: normal;
 }
@@ -11,7 +11,7 @@
 @font-face {
     font-family: 'klavika', sans-serif;
     src: url('/system/modules/com.overwolf.website/resources/fonts/KlavikaBasic-Regular.otf');
-    //src: url('../fonts/KlavikaBasic-Regular.otf');
+    src: url('../fonts/KlavikaBasic-Regular.otf');
     font-weight: 400;
     font-style: normal;
 }
@@ -19,7 +19,7 @@
 @font-face {
     font-family: 'klavika', sans-serif;
     src: url('/system/modules/com.overwolf.website/resources/fonts/KlavikaBasic-Medium.otf');
-    //src: url('../fonts/KlavikaBasic-Medium.otf');
+    src: url('../fonts/KlavikaBasic-Medium.otf');
     font-weight: 500;
     font-style: normal;
 }
@@ -27,7 +27,7 @@
 @font-face {
     font-family: 'klavika';
     src: url("/system/modules/com.overwolf.website/resources/fonts/KlavikaWebBasicRegular.woff");
-    //src: url('../fonts/KlavikaWebBasicRegular.woff');
+    src: url('../fonts/KlavikaWebBasicRegular.woff');
     font-weight: 400;
     font-style: normal;
 }
@@ -35,6 +35,15 @@
 a {
     text-decoration: none;
     cursor: pointer;
+}
+
+a {
+    color: $purpleGrey;
+    text-decoration: underline;
+
+    &:hover {
+        color: $purpleWhite;
+    }
 }
 
 img {
@@ -731,6 +740,16 @@ h2 {
     font-weight: 300;
 }
 
+h1,
+h2,
+h3 {
+    text-transform: lowercase;
+
+    &:first-letter {
+        text-transform: capitalize;
+    }
+}
+
 .section__wrapper {
     display: flex;
     flex-direction: column;
@@ -779,9 +798,24 @@ h2 {
     line-height: 145%;
     color: $purpleWhite;
     padding: 12px 16px;
+    text-decoration: none;
 
     &:hover {
         background: #FF0055;
+    }
+}
+
+.btn__transparent {
+    font-size: 16px;
+    line-height: 145%;
+    color: #f4f2ff;
+    border: 1px solid #797399;
+    padding: 8px 16px;
+    background: transparent;
+    text-decoration: none;
+
+    &:hover {
+        background: #332E4D;
     }
 }
 

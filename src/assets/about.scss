@@ -1,4 +1,61 @@
 @import '../scss_components/vars';
+.page__about {
+    .section__wrapper {
+        max-width: 1175px;
+        position: relative;
+    }
+
+    .section__about-intro {
+        .section__wrapper {
+            padding-top: 122px;
+
+            @media only screen and (max-width: 812px) {
+                max-width: 762px;
+                padding-top: 68px;
+                padding-bottom: 43px;
+            }
+
+            @media only screen and (max-width: 600px) {
+                max-width: 456px;
+                margin: 0;
+                padding-top: 62px;
+                padding-bottom: 68px;
+            }
+        }
+    }
+
+    .block__text-half {
+        max-width: 516px;
+        padding: 0 20px 0 0;
+
+
+        @media only screen and (max-width: 812px) {
+            max-width: 430px;
+        }
+
+        h1,
+        h2 {
+            padding-bottom: 23px;
+
+            @media only screen and (max-width: 812px) {
+                max-width: 370px;
+                padding-bottom: 15px;
+            }
+        }
+
+        p {
+            padding: 10px 0;
+            font-family: 'Lato', sans-serif;
+            font-weight: normal;
+            font-size: 18px;
+            line-height: 24px;
+
+            @media only screen and (max-width: 600px) {
+                max-width: 289px;
+            }
+        }
+    }
+}
 
 .section__about {
     align-items: flex-start;
@@ -70,60 +127,6 @@
     align-items: flex-start;
 }
 
-.page__about {
-    .section__wrapper {
-        max-width: 1175px;
-        position: relative;
-    }
-
-    .section__about-intro {
-        .section__wrapper {
-            padding-top: 122px;
-
-            @media only screen and (max-width: 812px) {
-                max-width: 762px;
-                padding-top: 68px;
-                padding-bottom: 43px;
-            }
-
-            @media only screen and (max-width: 600px) {
-                max-width: 416px;
-                margin: 0;
-                padding-top: 62px;
-                padding-bottom: 68px;
-            }
-        }
-    }
-
-    .block__text-half {
-        max-width: 516px;
-        padding: 0 20px 0 0;
-
-
-        @media only screen and (max-width: 812px) {
-            max-width: 430px;
-        }
-
-        h1,
-        h2 {
-            padding-bottom: 23px;
-
-            @media only screen and (max-width: 812px) {
-                max-width: 370px;
-                padding-bottom: 15px;
-            }
-        }
-
-        p {
-            padding: 10px 0;
-            font-family: 'Lato', sans-serif;
-            font-weight: normal;
-            font-size: 18px;
-            line-height: 24px;
-        }
-    }
-}
-
 .section__about {
     &-gamers {
         .section__wrapper {
@@ -138,12 +141,12 @@
 
             @media only screen and (max-width: 600px) {
                 padding-top: 60px;
-                padding-bottom: 80px;
+                padding-bottom: 57px;
             }
 
             .block__text-half p {
                 @media only screen and (max-width: 600px) {
-                    max-width: 300px;
+                    max-width: 272px;
                 }
             }
         }
@@ -283,7 +286,7 @@
 
         @media only screen and (max-width: 480px) {
             top: 447px;
-            right: -40px;
+            right: 0;
             width: auto;
         }
     }
@@ -294,7 +297,7 @@
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
-        margin-top: 20px;
+        //margin-top: 20px;
 
         @media only screen and (max-width: 812px) {
             justify-content: space-evenly;
@@ -346,12 +349,6 @@
 
         a {
             display: block;
-            color: $purpleWhite;
-            text-decoration: underline;
-
-            &:hover {
-                color: $purpleBlack;
-            }
         }
     }
 
@@ -418,5 +415,14 @@
         @media only screen and (max-width: 600px) {
             margin: 19px auto 0;
         }
+    }
+}
+
+a {
+    color: $purpleGrey;
+    text-decoration: underline;
+
+    &:hover {
+        color: $purpleWhite;
     }
 }
