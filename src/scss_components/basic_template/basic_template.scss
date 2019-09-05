@@ -413,6 +413,12 @@ body {
                     cursor: pointer;
                 }
 
+                &:hover {
+                    > a {
+                        color: $purpleGrey;
+                    }
+                }
+
                 &.active {
                     > a {
                         color: $purpleWhite;
