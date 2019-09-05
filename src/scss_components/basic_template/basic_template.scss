@@ -562,6 +562,7 @@ header.bg__color {
                     font-size: 14px;
                     color: inherit;
                     transition: color $fast-hover;
+                    text-decoration: none;
 
                     &:hover {
                         color: $purpleF4;

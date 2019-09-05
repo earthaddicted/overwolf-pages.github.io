@@ -246,7 +246,6 @@
             }
 
             .btn__download {
-
                 margin: 0 8px;
                 padding: 8px 22px;
                 font-family: 'Lato', sans-serif;
@@ -256,6 +255,7 @@
                 line-height: normal;
                 border: 1px solid #797399;
                 background: transparent;
+                text-decoration: none;
                 transition: .1s ease-in-out;
 
                 &:hover {

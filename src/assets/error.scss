@@ -1,8 +1,17 @@
 @import '../scss_components/vars';
 
-.header__logo {
+.header__logo-small {
     display: block;
     padding: 16px 16px;
+
+    svg {
+        fill: #D3CFE5;
+        transition: .1s ease-in-out;
+
+        &:hover {
+            fill: #F4F2FF;
+        }
+    }
 
     img {
         min-width: 32px;
