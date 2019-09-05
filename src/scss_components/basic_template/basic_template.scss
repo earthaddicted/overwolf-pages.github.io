@@ -370,8 +370,19 @@ body {
                 transition: max-height 0.4s;
                 max-height: 0;
 
-                > li {
+                  li {
                     display: flex;
+
+                     a {
+                         color: $purpleGrey;
+                     }
+
+                    &:hover {
+
+                       a {
+                            color: #f4f2ff;
+                       }
+                    }
                 }
 
                 .icon-menu-item {
@@ -402,6 +413,14 @@ body {
                     cursor: pointer;
                 }
 
+                &:hover {
+                    > a {
+                        color: #958fb2;
+                    }
+                }
+
+
+
                 &.active {
 
                     svg.icon_drop-down {
@@ -430,6 +449,17 @@ body {
                     text-align: center;
                     line-height: 52px;
                     color: currentColor;
+                }
+
+
+                &:hover {
+                    > a {
+                        color: #f4f2ff;
+                    }
+
+                    .submenu-parent a {
+                        color: currentColor;
+                    }
                 }
 
             }
