@@ -413,15 +413,10 @@ body {
                     cursor: pointer;
                 }
 
-                &:hover {
-                    > a {
-                        color: #958fb2;
-                    }
-                }
-
-
-
                 &.active {
+                    > a {
+                        color: $purpleWhite;
+                    }
 
                     svg.icon_drop-down {
                         transform: rotate(180deg) translateY(0%);
@@ -442,7 +437,6 @@ body {
                     border-top: solid 1px $purple16;
                 }
 
-
                 a {
                     width: 100%;
                     height: 56px;
@@ -451,14 +445,9 @@ body {
                     color: currentColor;
                 }
 
-
                 &:hover {
                     > a {
                         color: #f4f2ff;
-                    }
-
-                    .submenu-parent a {
-                        color: currentColor;
                     }
                 }
 
