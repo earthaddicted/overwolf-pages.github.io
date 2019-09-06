@@ -550,18 +550,52 @@ header.bg__color {
     width: 100%;
     padding: 0 56px;
 
+    @media only screen and (max-width: 1024px) {
+        padding: 0 30.8px;
+    }
+
+    @media only screen and (max-width: 600px) {
+        padding: 0 56px;
+    }
+
     @media only screen and (max-width: 479px) {
         padding: 0 43px;
     }
 
+
+
+    &__logo {
+        @media only screen and (max-width: 600px) {
+            margin-bottom: 37px;
+        }
+
+        &-small {
+            width: 55px;
+
+            @media only screen and (max-width: 600px) {
+                width: 100%;
+            }
+
+            svg {
+                @media only screen and (max-width: 600px) {
+                    width: 48px;
+                    height: 48px;
+                }
+            }
+        }
+    }
+
     &__wrapper {
         display: flex;
-        flex-direction: column;
         max-width: 1136px;
         margin: 0 auto;
         padding: 56px 0;
         border-top: solid 1px transparent;
         font-size: 14px;
+
+        @media only screen and (max-width: 600px) {
+            flex-direction: column;
+        }
 
         h5 {
             margin-bottom: 20px;
@@ -573,23 +607,51 @@ header.bg__color {
         }
 
         > ul {
+            display: flex;
+            flex-wrap: wrap;
+
             //@media only screen and (max-width: 1024px) {
-            //    grid-gap: 28px 22px;
+            ////    grid-gap: 28px 22px;
+            //
             //}
 
-            display: grid;
-            grid-template-columns: 55px 152px 152px 152px 152px 152px;
-            grid-gap: 32px 40px;
-
-            @media only screen and (max-width: 1024px) {
-                grid-gap: 32px 23px;
-            }
-
+            //display: grid;
+            grid-template-columns: 152px 152px 152px 152px 152px;
+            //grid-gap: 32px 40px;
+            //
+            //@media only screen and (max-width: 1024px) {
+            //    grid-gap: 32px 23px;
+            //}
+            //
             @media only screen and (max-width: 600px) {
-                grid-gap: 21px 23px;
+            //    grid-gap: 21px 23px;
+                justify-content: space-between;
             }
 
             > li {
+                max-width: 152px;
+                min-width: 112px;
+                width: auto;
+                margin: 0 40px 40px;
+                white-space: nowrap;
+                margin-bottom: 30px;
+
+                @media only screen and (max-width: 1024px) {
+                    max-width: 142px;
+                    width: 100%;
+                    margin: 0 10px 30px 40px;
+                }
+
+                @media only screen and (max-width: 600px) {
+                    //width: 45%;
+                    margin: 0 40px 28px 0;
+                }
+
+                @media only screen and (max-width: 479px) {
+                    width: 45%;
+                    margin: 0 10px 30px 0;
+                }
+
                 a {
                     margin-bottom: 12px;
                     display: block;
