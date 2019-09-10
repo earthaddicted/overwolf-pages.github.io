@@ -35,9 +35,6 @@
 a {
     text-decoration: none;
     cursor: pointer;
-}
-
-a {
     color: $purpleGrey;
     text-decoration: underline;
 
@@ -489,7 +486,7 @@ body {
     }
 }
 
-header.bg__color {
+.header.bg__color {
     transition: .3s ease-in-out;
     background: rgba(22, 19, 38, 0.9);
 }
@@ -610,21 +607,9 @@ header.bg__color {
             display: flex;
             flex-wrap: wrap;
 
-            //@media only screen and (max-width: 1024px) {
-            ////    grid-gap: 28px 22px;
-            //
-            //}
-
-            //display: grid;
             grid-template-columns: 152px 152px 152px 152px 152px;
-            //grid-gap: 32px 40px;
-            //
-            //@media only screen and (max-width: 1024px) {
-            //    grid-gap: 32px 23px;
-            //}
-            //
+
             @media only screen and (max-width: 600px) {
-            //    grid-gap: 21px 23px;
                 justify-content: space-between;
             }
 
@@ -672,6 +657,39 @@ header.bg__color {
     }
 }
 
+.footer {
+    flex-shrink: 0;
+}
+
+.footer__divider {
+    .footer__wrapper {
+        border-top: 1px solid #332e4d;
+    }
+}
+
+.header__logo-small,
+.footer__logo-small {
+    display: block;
+
+    svg {
+        fill: #D3CFE5;
+        transition: .1s ease-in-out;
+
+        &:hover {
+            fill: #F4F2FF;
+        }
+    }
+
+    img {
+        min-width: 32px;
+        height: 32px;
+    }
+}
+
+.header__logo-small {
+    padding: 16px;
+}
+
 .black-overlay {
     background: rgba(0, 0, 0, .9);
     position: fixed;
@@ -716,95 +734,8 @@ main {
         overflow: hidden;
     }
 }
-
-.footer {
-    flex-shrink: 0;
-}
-
-.header__logo-small,
-.footer__logo-small {
-    display: block;
-
-    svg {
-        fill: #D3CFE5;
-        transition: .1s ease-in-out;
-
-        &:hover {
-            fill: #F4F2FF;
-        }
-    }
-
-    img {
-        min-width: 32px;
-        height: 32px;
-    }
-}
-
-.header__logo-small {
-    padding: 16px;
-}
-
 /* sticky footer END */
 
-
-/* footer with dark background footer */
-//.footer__dark {
-//    background-color: $purpleBlack;
-//
-//    .footer__wrapper {
-//        border-top: solid 1px transparent;
-//        padding-top: 82px;
-//
-//        @media only screen and (max-width: 812px) {
-//            max-width: 560px;
-//            margin: auto;
-//            padding-top: 40px;
-//        }
-//
-//        h5 {
-//            margin-bottom: 20px;
-//        }
-//
-//        > ul > li a {
-//            margin-bottom: 11px;
-//            line-height: 19px;
-//
-//            @media only screen and (max-width: 812px) {
-//                margin-bottom: 13px;
-//            }
-//        }
-//    }
-//}
-
-/* footer with dark background footer END */
-
-.footer__divider {
-    .footer__wrapper {
-        border-top: 1px solid #332e4d;
-    }
-}
-
-//.footer__light {
-//    background: #201C33;
-//
-//    .footer__wrapper {
-//        padding-top: 40px;
-//
-//        h5 {
-//            margin-bottom: 20px;
-//        }
-//
-//        > ul {
-//            @media only screen and (max-width: 1024px) {
-//                grid-gap: 28px 22px;
-//            }
-//        }
-//
-//        > ul > li a {
-//            margin-bottom: 12px;
-//        }
-//    }
-//}
 
 .section {
     display: flex;
@@ -836,16 +767,6 @@ main {
         }
     }
 }
-
-//.header.fixed + main > .section:first-of-type .section__wrapper {
-//    padding-top: 132px;
-//
-//    @media only screen and (max-width: 1024px) {
-//        max-width: 674px;
-//        padding-top: 74px;
-//        padding-bottom: 30px;
-//    }
-//}
 
 h1,
 h2 {
@@ -933,6 +854,13 @@ h3 {
 
     &:hover {
         background: #332E4D;
+    }
+}
+
+h2 {
+
+    span {
+        color: $pink;
     }
 }
 
