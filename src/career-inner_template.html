@@ -374,7 +374,7 @@
         <section class="section section__position section__text-left">
             <div class="position__btn section__text-left">
                 <div class="section__wrapper section__wrapper-special">
-                    <a href="" class="btn__transparent">View all positions</a>
+                    <a href="career_template.html" class="btn__transparent">View all positions</a>
                 </div>
             </div>
             <div class="section__wrapper">
@@ -458,9 +458,10 @@
                                 <textarea name="comment-games" placeholder="Enter game name here"></textarea>
                             </label>
 
-                            <label>
-                                Your CV and other files
-
+                            <label class="textarea__text">
+                                <span>
+                                    Your CV and other files
+                                </span>
                                 <div class="file-upload empty">
                                     <div class="selection">
                                         <button class="remove"></button>
@@ -491,15 +492,21 @@
                 </div>
                 <!--  info to share -->
                 <div class="position__share">
-                    <div class="position__share-copy">
-
-                    </div>
-                    <div class="position__share-socials">
+                    <div class="position__share-title">
                         <span>Or share this position</span>
+                    </div>
+                    <div class="share__copy">
+                        <input class="share__copy-link" type="text" value="" id="urlId">
+                        <div class="tooltip">
+                            <button class="btn__transparent" onclick="myFunction()" onmouseout="outFunc()">
+                                <span class="tooltiptext" id="myTooltip">Copy to clipboard</span>
+                                Copy text
+                            </button>
+                        </div>
                     </div>
                 </div>
             </div>
-    </div>
+<!--    </div>-->
     </section>
     </div>
 </main>

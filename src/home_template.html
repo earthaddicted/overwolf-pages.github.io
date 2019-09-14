@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Career</title>
+    <title>Home page</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport"
@@ -16,11 +16,7 @@
     <link href="https://fonts.googleapis.com/css?family=Lato:400,400i,700" rel="stylesheet">
     <!-- build:css -->
     <link href="css/app.css" rel="stylesheet">
-    <link href="css/career.css" rel="stylesheet">
-    <link href="css/app.css" rel="stylesheet">
-    <!--    <link rel="stylesheet" type="text/css" media="all" href="css/global.css"/>-->
-    <!--    <link rel="stylesheet" type="text/css" media="all" href="css/page-template.css"/>-->
-    <!--    <link rel="stylesheet" type="text/css" media="all" href="css/landing.css"/>-->
+    <link href="css/about.css" rel="stylesheet">
     <!-- endbuild -->
     <meta name="viewport" content="width=device-width">
     <script>
@@ -369,145 +365,7 @@
     </nav>
 </header>
 <main class="content">
-    <!-- general wrapper for all sections, we can add special class to container to specify styles for pages -->
-    <div class="page__single page__position">
-        <section class="section section__position section__text-left">
-            <div class="position__btn section__text-left">
-                <div class="section__wrapper section__wrapper-special">
-                    <a href="career_template.html" class="btn__transparent">View all positions</a>
-                </div>
-            </div>
-            <div class="section__wrapper">
-                <h1>
-                    Product manager
-                </h1>
-                <div class="jobs__info">
-                                <span class="jobs__location">
-                                    Ramat Gan, Israel
-                                </span>
-                    <span class="jobs__type">
-                                    Full-time
-                                </span>
-                    <span class="jobs__level">
-                                    Senior
-                                </span>
-                </div>
-                <div class="position__content">
-                    <div class="position__text">
-                        <h3>Description</h3>
-                        <p>
-                            We are looking for a passionate Product manager with strong UX design skills to join our
-                            growing Product Team.
-                        </p>
-                        <p>
-                            As a PM in our team, you’ll be creating unique user experiences (hands on UX!) for millions
-                            of gamers over popular games (LoL, Dota 2, Fortnite etc.), work with big gaming brands, and
-                            collaborate with various developers.
-                        </p>
-                        <p>This is the ultimate position for an experienced PM who wants make PC gaming even more
-                            awesome!</p>
-                        <h3>Responsibilities</h3>
-                        <p>
-                            Participate in the creation and execution of product vision and roadmap.
-                            Communicate with users and clients to understand their needs and pains, create concepts, and
-                            prioritize scope.
-                            Write comprehensive requirement documents and create detailed wireframes.
-                            Work closely with designers to create clean and enticing UI.
-                            Define success criterias, analytics, KPIs, measure and analyze performance.
-                            Oversee the implementation of best practices and promote high quality product design.
-                        </p>
-                        <h3>
-                            Requirements
-                        </h3>
-                        <p>
-                            > True passion for PC gaming - a must. Seriously, You must LOVE playing games.
-                            Deep understanding of UI/UX practices, work flows, methodology and theory.
-                            2+ years experience of proven hands on UX design work on consumer products (research,
-                            concept, scope, documentation, wireframing, prototyping, analytics).
-                            High level English - verbal and written. Strong copy and micro-copy skills in English.
-                            Ability to define KPIs and turn big data into actionable product recommendations.
-                            Team player and a great communicator - you’ll be working with A LOT of people.
-                            Ability to work in a fast-paced startup environment - many games, many products at once.
-                        </p>
-                    </div>
-                    <div class="position__form">
-                        <form method="POST" enctype="multipart/form-data" class="form">
-                            <h3>Apply to this position</h3>
-                            <input type="hidden" name="uid" value="<?=$data['uid'] ?>">
-                            <label>
-                                <span>Full Name</span>
-                                <input type="text" name="first_name" placeholder="Type your name here" required>
-                            </label>
-
-                            <label>
-                                <span>Email:</span>
-                                <input type="email" name="email" placeholder="Enter your email" required>
-                            </label>
-                            <label>
-                                <span>Your phone</span>
-                                <input type="tel" name="phone" placeholder="Your mobile number" required>
-                            </label>
-
-                            <label>
-                                <span>How did you hear about Overwolf ?</span>
-                                <textarea name="comment-about" placeholder="This is my phone"></textarea>
-                            </label>
-
-                            <label>
-                                <span>What games do you play?</span>
-                                <textarea name="comment-games" placeholder="Enter game name here"></textarea>
-                            </label>
-
-                            <label class="textarea__text">
-                                <span>
-                                    Your CV and other files
-                                </span>
-                                <div class="file-upload empty">
-                                    <div class="selection">
-                                        <button class="remove"></button>
-                                        <div class="name"></div>
-                                    </div>
-                                    <div class="target">
-                                        <div class="error" style="display: none"></div>
-                                        Add files or drag here:<br>
-                                        (PDF, Doc, Docx formats only)
-                                        <input type="file" name="cv" accept=".pdf, .doc, .docx">
-                                    </div>
-                                </div>
-                            </label>
-                            <label>
-                                <span>A personal touch</span>
-                                <textarea name="comment" class="large__textarea"
-                                          placeholder="I’m amazing, and you shouldn’t miss out on me..."></textarea>
-                            </label>
-                            <button class="submit btn__pink">Send application</button>
-                            <div class="error"></div>
-                            <p class="email__link-career">
-                                Or, email us at:<br>
-                                <a href="mailto:<?=$data['email'] ?>"><?=$data['email'] ?></a>
-                                <!-- <a href="">overwolf.0D.B03@applynow.io</a>-->
-                            </p>
-                        </form>
-                    </div>
-                </div>
-                <!--  info to share -->
-                <div class="position__share">
-                    <div class="position__share-title">
-                        <span>Or share this position</span>
-                    </div>
-                    <div class="share__copy">
-                        <input class="share__copy-link" type="text" value="" id="urlId">
-                        <div class="tooltip">
-                            <button class="btn__transparent" onclick="myFunction()" onmouseout="outFunc()">
-                                <span class="tooltiptext" id="myTooltip">Copy to clipboard</span>
-                                Copy text
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-<!--    </div>-->
-    </section>
+    <div class="page__single page__home">
     </div>
 </main>
 <footer class="footer">
@@ -526,13 +384,22 @@
             <li>
                 <h5>Product</h5>
                 <ul>
-                    <!--                    <li><a href="">Overwolf platform</a></li>-->
+                    <li><a href="">Overwolf platform</a></li>
                     <li><a class="js-link_appstore" href="https://www.overwolf.com/appstore">Appstore</a></li>
                     <li><a href="">Download</a></li>
 
                 </ul>
             </li>
 
+            <li>
+                <h5>Company</h5>
+                <ul>
+                    <li><a href="https://www.overwolf.com/about-overwolf/">About us</a></li>
+                    <li><a href="https://medium.com/overwolf">Blog</a></li>
+                    <li><a href="http://www.overwolf.com/careers/">Jobs</a></li>
+                    <li><a href="http://www.overwolf.com/press#mediakit">Brand guidelines</a></li>
+                </ul>
+            </li>
             <li>
                 <h5>Developers</h5>
                 <ul>
@@ -551,16 +418,6 @@
             </li>
 
             <li>
-                <h5>Company</h5>
-                <ul>
-                    <li><a href="https://www.overwolf.com/about-overwolf/">About us</a></li>
-                    <li><a href="https://medium.com/overwolf">Blog</a></li>
-                    <li><a href="http://www.overwolf.com/careers/">Jobs</a></li>
-                    <li><a href="http://www.overwolf.com/press#mediakit">Brand guidelines</a></li>
-                </ul>
-            </li>
-
-            <li>
                 <h5>Resources</h5>
                 <ul>
                     <li><a href="http://support.overwolf.com">Help & support</a></li>
@@ -572,6 +429,7 @@
     </div>
 
 </footer>
+
 <script>
     (function (h, o, t, j, a, r) {
         h.hj = h.hj || function () {

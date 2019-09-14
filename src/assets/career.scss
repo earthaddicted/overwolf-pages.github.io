@@ -15,6 +15,8 @@
     }
 
     .btn__transparent {
+        white-space: nowrap;
+
         @media only screen and (max-width: 600px) {
             padding: 6px 16px;
         }
@@ -363,6 +365,7 @@
     width: 10000vw;
     animation: scroll 20s infinite linear;
     animation-play-state: paused;
+    background-size: contain;
 
     @media only screen and (min-width: 1025px) {
         background: url("../img/career/multiple_pictures_s.png") repeat-x;
@@ -422,7 +425,6 @@
 }
 
 /* page position */
-
 .section__position {
     justify-content: flex-start;
     background: #201C33;
@@ -431,9 +433,11 @@
         max-width: 1246px;
         align-items: flex-start;
         padding-top: 0 !important;
+        padding-bottom: 110px;
 
-        @media only screen and (max-width: 1024px) {
+        @media only screen and (max-width: 1150px) {
             max-width: 768px;
+            padding-bottom: 40px;
         }
     }
 
@@ -443,7 +447,7 @@
         color: $purpleWhite;
         margin-top: 64px;
 
-        @media only screen and (max-width: 1024px) {
+        @media only screen and (max-width: 1150px) {
             margin-top: 30px;
         }
     }
@@ -457,7 +461,7 @@
     &__btn {
         width: 100%;
 
-        @media only screen and (max-width: 1024px) {
+        @media only screen and (max-width: 1150px) {
             background: #161326;
         }
 
@@ -465,8 +469,8 @@
             padding-top: 81px !important;
             padding-bottom: 0;
 
-            @media only screen and (max-width: 1024px) {
-                padding-top: 41px !important;
+            @media only screen and (max-width: 1150px) {
+                padding-top: 44px !important;
                 padding-bottom: 34px;
             }
         }
@@ -474,6 +478,10 @@
         .btn__transparent {
             margin-top: 29px;
             padding: 6px 16px;
+
+            @media only screen and (max-width: 1150px) {
+                margin-top: 25px;
+            }
         }
     }
 
@@ -481,14 +489,21 @@
         display: flex;
         margin: 14px 0;
 
-        @media only screen and (max-width: 1024px) {
+        @media only screen and (max-width: 1150px) {
             flex-wrap: wrap;
+            margin-top: 16px;
         }
 
         form {
             width: 463px;
             padding: 20px 48px 10px;
             background: #332E4D;
+
+            @media only screen and (max-width: 660px) {
+                max-width: 463px;
+                width: 100%;
+                padding: 20px 20px 10px;
+            }
         }
 
         h3 {
@@ -509,9 +524,13 @@
         border-bottom: 1px solid #332E4D;
         padding-top: 2px;
 
-        @media only screen and (max-width: 1024px) {
+        @media only screen and (max-width: 1150px) {
             border-bottom: none;
             margin-bottom: 74px;
+        }
+
+        @media only screen and (max-width: 660px) {
+            margin-right: 0;
         }
 
         h3 {
@@ -525,8 +544,12 @@
     }
 
     &__form {
-        h3 {
+        @media only screen and (max-width: 1150px) {
+            margin-left: 47px;
+        }
 
+        @media only screen and (max-width: 660px) {
+            margin-left: 0;
         }
 
         .file-upload {
@@ -546,6 +569,10 @@
             -webkit-transition: color .1s ease;
             transition: color .1s ease;
             border-radius: 3px;
+
+            @media only screen and (max-width: 1150px) {
+                margin-top: -20px;
+            }
 
             input {
                 opacity: 0;
@@ -611,6 +638,14 @@
         textarea {
             height: 70px;
             //resize: none;
+
+            @media only screen and (max-width: 1150px) {
+                height: 36px;
+            }
+        }
+
+        .textarea__text {
+            padding-top: 25px;
         }
 
         .large__textarea {
@@ -620,6 +655,10 @@
         .submit {
             margin-top: 21px;
             padding: 6px 15px;
+
+            @media only screen and (max-width: 1150px) {
+                margin-top: 10px;
+            }
         }
     }
 }
@@ -636,6 +675,92 @@
         &:hover {
             color: $purpleWhite;
         }
+    }
+}
+
+.position__share {
+    width: 100%;
+    max-width: 603px;
+    margin-top: 87px;
+    color: $purpleWhite;
+    font-size: 16px;
+    line-height: 23px;
+
+    @media only screen and (max-width: 1150px) {
+        margin-left: 47px;
+        padding: 20px 0;
+        border-top: 1px solid #332E4D;
+        max-width: 558px;
+    }
+
+    @media only screen and (max-width: 660px) {
+        margin-left: 0;
+    }
+
+    .tooltip {
+        position: relative;
+        display: inline-block;
+        transition: opacity 0.5s;
+    }
+
+    .tooltiptext {
+        visibility: hidden;
+        width: 140px;
+        background: rgba(51, 46, 77, .5);
+        color: $purpleWhite;
+        text-align: center;
+        padding: 5px;
+        position: absolute;
+        z-index: 1;
+        bottom: 150%;
+        left: 50%;
+        margin-left: -75px;
+        opacity: 0;
+        transition: opacity 0.5s;
+    }
+
+    //.tooltip .tooltiptext::after {
+    //    content: "";
+    //    position: absolute;
+    //    top: 100%;
+    //    left: 50%;
+    //    margin-left: -5px;
+    //    border-width: 5px;
+    //    border-style: solid;
+    //    border-color: #555 transparent transparent transparent;
+    //}
+
+    .tooltip:hover .tooltiptext {
+        visibility: visible;
+        opacity: 1;
+    }
+}
+
+.share__copy {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 20px 0;
+
+    &-link {
+        width: 100%;
+        max-width: 371px;
+        height: 36px;
+        //margin-right: 14px;
+        //margin-bottom: 20px;
+        margin: 0 14px 20px 0;
+        padding: 8px 12px;
+        background-color: #161326;
+        //background: linear-gradient(left, rgba(22,19,38,1) 0%, rgba(22,19,38,1) 3%, rgba(22,19,38,1) 46%, rgba(22,19,38,1) 76%, rgba(145,143,172,1) 100%);
+        //background: linear-gradient(90deg, #958FB2 63.28%, rgba(149, 143, 178, 0) 108.89%);
+        color: $purpleWhite;
+        font-size: 16px;
+        border: none;
+
+
+    }
+
+    .btn__transparent {
+        padding: 5.5px 16px;
     }
 }
 

@@ -68,3 +68,25 @@ const HeaderManager = (function () {
 }());
 
 const headerManager = new HeaderManager(overlayManager);
+
+// copy link
+var copyText = document.getElementById("urlId");
+copyText.value = copyText.innerHTML = window.location.href;
+
+
+function myFunction() {
+    var copyText = document.getElementById("urlId");
+    copyText.select();
+    copyText.setSelectionRange(0, 99999);
+    document.execCommand("copy");
+
+    var tooltip = document.getElementById("myTooltip");
+    tooltip.classList.add('active');
+    // tooltip.innerHTML = "Copied: " + copyText.value;
+    tooltip.innerHTML = "Copied";
+}
+
+function outFunc() {
+    var tooltip = document.getElementById("myTooltip");
+    tooltip.innerHTML = "Copy to clipboard";
+}
