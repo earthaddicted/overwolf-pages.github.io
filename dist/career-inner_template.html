@@ -370,162 +370,140 @@
 </header>
 <main class="content">
     <!-- general wrapper for all sections, we can add special class to container to specify styles for pages -->
-    <div class="page__single page__career">
-        <section class="section section__career-inner">
+    <div class="page__single page__position">
+        <section class="section section__position section__text-left">
+            <div class="position__btn section__text-left">
+                <div class="section__wrapper section__wrapper-special">
+                    <a href="" class="btn__transparent">View all positions</a>
+                </div>
+            </div>
             <div class="section__wrapper">
-                <a href="" class="btn__transparent">View all positions</a>
-            </div>
-        </section>
+                <h1>
+                    Product manager
+                </h1>
+                <div class="jobs__info">
+                                <span class="jobs__location">
+                                    Ramat Gan, Israel
+                                </span>
+                    <span class="jobs__type">
+                                    Full-time
+                                </span>
+                    <span class="jobs__level">
+                                    Senior
+                                </span>
+                </div>
+                <div class="position__content">
+                    <div class="position__text">
+                        <h3>Description</h3>
+                        <p>
+                            We are looking for a passionate Product manager with strong UX design skills to join our
+                            growing Product Team.
+                        </p>
+                        <p>
+                            As a PM in our team, you’ll be creating unique user experiences (hands on UX!) for millions
+                            of gamers over popular games (LoL, Dota 2, Fortnite etc.), work with big gaming brands, and
+                            collaborate with various developers.
+                        </p>
+                        <p>This is the ultimate position for an experienced PM who wants make PC gaming even more
+                            awesome!</p>
+                        <h3>Responsibilities</h3>
+                        <p>
+                            Participate in the creation and execution of product vision and roadmap.
+                            Communicate with users and clients to understand their needs and pains, create concepts, and
+                            prioritize scope.
+                            Write comprehensive requirement documents and create detailed wireframes.
+                            Work closely with designers to create clean and enticing UI.
+                            Define success criterias, analytics, KPIs, measure and analyze performance.
+                            Oversee the implementation of best practices and promote high quality product design.
+                        </p>
+                        <h3>
+                            Requirements
+                        </h3>
+                        <p>
+                            > True passion for PC gaming - a must. Seriously, You must LOVE playing games.
+                            Deep understanding of UI/UX practices, work flows, methodology and theory.
+                            2+ years experience of proven hands on UX design work on consumer products (research,
+                            concept, scope, documentation, wireframing, prototyping, analytics).
+                            High level English - verbal and written. Strong copy and micro-copy skills in English.
+                            Ability to define KPIs and turn big data into actionable product recommendations.
+                            Team player and a great communicator - you’ll be working with A LOT of people.
+                            Ability to work in a fast-paced startup environment - many games, many products at once.
+                        </p>
+                    </div>
+                    <div class="position__form">
+                        <form method="POST" enctype="multipart/form-data" class="form">
+                            <h3>Apply to this position</h3>
+                            <input type="hidden" name="uid" value="<?=$data['uid'] ?>">
+                            <label>
+                                <span>Full Name</span>
+                                <input type="text" name="first_name" placeholder="Type your name here" required>
+                            </label>
 
-        <section class="section section__career-jobs">
-            <div class="section__wrapper section__wrapper-jobs">
-                <h2>Open Possition</h2>
-                <div class="jobs__block">
-                    <div class="jobs__item">
-                        <div class="jobs__item-top">
-                            <span class="jobs__item-title">
-                                Manual QA Engineer
-                            </span>
-                        </div>
-                        <div class="jobs__item-container">
-                            <div class="jobs__info">
-                                <span class="jobs__location">
-                                    Ramat Gan, Israel
-                                </span>
-                                <span class="jobs__type">
-                                    Full-time
-                                </span>
-                                <span class="jobs__level">
-                                    Senior
-                                </span>
-                            </div>
-                            <p class="jobs__description">
-                                Overwolf is a powerful app store for PC games apps.
+                            <label>
+                                <span>Email:</span>
+                                <input type="email" name="email" placeholder="Enter your email" required>
+                            </label>
+                            <label>
+                                <span>Your phone</span>
+                                <input type="tel" name="phone" placeholder="Your mobile number" required>
+                            </label>
+
+                            <label>
+                                <span>How did you hear about Overwolf ?</span>
+                                <textarea name="comment-about" placeholder="This is my phone"></textarea>
+                            </label>
+
+                            <label>
+                                <span>What games do you play?</span>
+                                <textarea name="comment-games" placeholder="Enter game name here"></textarea>
+                            </label>
+
+                            <label>
+                                Your CV and other files
+
+                                <div class="file-upload empty">
+                                    <div class="selection">
+                                        <button class="remove"></button>
+                                        <div class="name"></div>
+                                    </div>
+                                    <div class="target">
+                                        <div class="error" style="display: none"></div>
+                                        Add files or drag here:<br>
+                                        (PDF, Doc, Docx formats only)
+                                        <input type="file" name="cv" accept=".pdf, .doc, .docx">
+                                    </div>
+                                </div>
+                            </label>
+                            <label>
+                                <span>A personal touch</span>
+                                <textarea name="comment" class="large__textarea"
+                                          placeholder="I’m amazing, and you shouldn’t miss out on me..."></textarea>
+                            </label>
+                            <button class="submit btn__pink">Send application</button>
+                            <div class="error"></div>
+                            <p class="email__link-career">
+                                Or, email us at:<br>
+                                <a href="mailto:<?=$data['email'] ?>"><?=$data['email'] ?></a>
+                                <!-- <a href="">overwolf.0D.B03@applynow.io</a>-->
                             </p>
-                            <a href="" class="btn__transparent">
-                                View full details
-                            </a>
-                        </div>
+                        </form>
                     </div>
-                    <div class="jobs__item">
-                        <div class="jobs__item-top">
-                            <span class="jobs__item-title">
-                                Manual QA Engineer
-                            </span>
-                        </div>
-                        <div class="jobs__item-container">
-                            <div class="jobs__info">
-                                <span class="jobs__location">
-                                    Ramat Gan, Israel
-                                </span>
-                                <span class="jobs__type">
-                                    Full-time
-                                </span>
-                                <span class="jobs__level">
-                                    Senior
-                                </span>
-                            </div>
-                            <p class="jobs__description">
-                                Overwolf is looking for a talented and experienced software QA Engineer to join our
-                                winning team.
-                                Overwolf is a powerful app store for PC games apps.
-                                Our apps are used by millions of hardcore PC gamers, pro-players, and top streamers
-                                worldwide.
-                                This means that we get to work with many different apps.
-                            </p>
-                            <a href="" class="btn__transparent">
-                                View full details
-                            </a>
-                        </div>
+                </div>
+                <!--  info to share -->
+                <div class="position__share">
+                    <div class="position__share-copy">
+
                     </div>
-                    <div class="jobs__item">
-                        <div class="jobs__item-top">
-                            <span class="jobs__item-title">
-                                Manual QA Engineer
-                            </span>
-                        </div>
-                        <div class="jobs__item-container">
-                            <div class="jobs__info">
-                                <span class="jobs__location">
-                                    Ramat Gan, Israel
-                                </span>
-                                <span class="jobs__type">
-                                    Full-time
-                                </span>
-                                <span class="jobs__level">
-                                    Senior
-                                </span>
-                            </div>
-                            <p class="jobs__description">
-                                Overwolf is looking for a talented and experienced software QA Engineer to join our
-                                winning team.
-                                Overwolf is a powerful app store for PC games apps.
-                                Our apps are used by millions of hardcore PC gamers, pro-players, and top streamers
-                                worldwide.
-                                This means that we get to work with many different apps.
-                            </p>
-                            <a href="" class="btn__transparent">
-                                View full details
-                            </a>
-                        </div>
-                    </div>
-                    <div class="jobs__item">
-                        <div class="jobs__item-top">
-                            <span class="jobs__item-title">
-                                Manual QA Engineer
-                            </span>
-                        </div>
-                        <div class="jobs__item-container">
-                            <div class="jobs__info">
-                                <span class="jobs__location">
-                                    Ramat Gan, Israel
-                                </span>
-                                <span class="jobs__type">
-                                    Full-time
-                                </span>
-                                <span class="jobs__level">
-                                    Senior
-                                </span>
-                            </div>
-                            <p class="jobs__description">
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem dolorem eaque eveniet
-                                similique unde.
-                                Adipisci dignissimos ea eligendi et, explicabo id illo magnam nam natus placeat quam
-                                quasi quisquam sint.
-                                Eum minima molestias praesentium quam quo sapiente vero? Adipisci autem commodi culpa
-                                distinctio,
-                                est, exercitationem harum,
-                                hic in iste molestiae neque nostrum optio perferendis placeat quam reiciendis sint sunt
-                                voluptates?
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem dolorem eaque eveniet
-                                similique unde.
-                                Adipisci dignissimos ea eligendi et, explicabo id illo magnam nam natus placeat quam
-                                quasi quisquam sint.
-                            </p>
-                            <a href="" class="btn__transparent">
-                                View full details
-                            </a>
-                        </div>
+                    <div class="position__share-socials">
+                        <span>Or share this position</span>
                     </div>
                 </div>
             </div>
-
-            <div class="section__wrapper section__wrapper-full">
-                <h2>Our bags are currently full</h2>
-                <p>
-                    But we're always looking for amazing people!
-                    Email us at <span class="light-text">careers@overwolf.com</span> and we'll get in touch if anything
-                    comes up
-                </p>
-
-                <div class="jobs__full">
-                    <img src="../img/career/illustartion_bagpack.svg" alt="Our bags are currently full">
-                </div>
-            </div>
-        </section>
+    </div>
+    </section>
     </div>
 </main>
-<footer class="footer footer__divider">
+<footer class="footer">
     <div class="footer__wrapper">
         <div class="footer__logo">
             <a href="https://www.overwolf.com/" class="footer__logo-small">

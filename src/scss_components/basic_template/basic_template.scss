@@ -684,9 +684,7 @@ body {
             }
         }
     }
-}
 
-.footer {
     flex-shrink: 0;
 }
 
@@ -857,6 +855,13 @@ h3 {
 
 .underline {
     text-decoration: underline;
+}
+
+.btn__transparent,
+.btn__pink,
+button {
+    cursor: pointer;
+    transition: .1s ease-in-out;
 }
 
 .btn__pink {
