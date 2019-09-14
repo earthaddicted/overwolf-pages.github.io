@@ -366,17 +366,18 @@
     animation: scroll 20s infinite linear;
     animation-play-state: paused;
     background-size: contain;
+    background-repeat: repeat-x;
 
     @media only screen and (min-width: 1025px) {
-        background: url("../img/career/multiple_pictures_s.png") repeat-x;
+        background-image: url("../img/career/multiple_pictures_s.png");
     }
 
     @media only screen and (min-width: 1441px) {
-        background: url("../img/career/multiple_pictures_m.png") repeat-x;
+        background-image: url("../img/career/multiple_pictures_m.png");
     }
 
     @media only screen and (min-width: 1600px) {
-        background: url("../img/career/multiple_pictures_l.png") repeat-x;
+        background-image: url("../img/career/multiple_pictures_l.png");
     }
 
     img {
@@ -719,17 +720,6 @@
         transition: opacity 0.5s;
     }
 
-    //.tooltip .tooltiptext::after {
-    //    content: "";
-    //    position: absolute;
-    //    top: 100%;
-    //    left: 50%;
-    //    margin-left: -5px;
-    //    border-width: 5px;
-    //    border-style: solid;
-    //    border-color: #555 transparent transparent transparent;
-    //}
-
     .tooltip:hover .tooltiptext {
         visibility: visible;
         opacity: 1;
@@ -745,8 +735,6 @@
         width: 100%;
         max-width: 371px;
         height: 36px;
-        //margin-right: 14px;
-        //margin-bottom: 20px;
         margin: 0 14px 20px 0;
         padding: 8px 12px;
         background-color: #161326;
@@ -755,8 +743,6 @@
         color: $purpleWhite;
         font-size: 16px;
         border: none;
-
-
     }
 
     .btn__transparent {
