@@ -22,7 +22,7 @@
     &-intro {
         .section__wrapper {
             position: relative;
-            max-width: 563px;
+            max-width: 570px;
             padding-top: 164px !important;
             padding-bottom: 133px;
 
@@ -93,6 +93,10 @@
         .section__wrapper {
             max-width: 520px;
             padding: 97px 0 94px;
+
+            h2 {
+                text-transform: none;
+            }
 
             @media only screen and (max-width: 1150px) {
                 padding: 97px 0 91px;
