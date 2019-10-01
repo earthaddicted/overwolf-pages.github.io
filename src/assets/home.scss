@@ -34,6 +34,7 @@
         font-family: 'Lato';
         font-size: 20px;
         line-height: 26px;
+        text-transform: unset;
     }
 
     .block__text-half {
@@ -42,7 +43,6 @@
 
         @media only screen and (max-width: 1024px) {
             max-width: 100%;
-            margin: auto;
             padding: 13px 0 0;
         }
 
@@ -104,6 +104,11 @@
                 padding-top: 43px !important;
                 padding-bottom: 0;
             }
+
+            @media only screen and (max-width: 550px) {
+                margin-bottom: -145px!important;
+                padding-top: 28px !important;
+            }
         }
 
         .block__row {
@@ -114,24 +119,33 @@
             }
         }
 
-        .img__mob {
-            display: none;
-            @media only screen and (max-width: 500px) {
-                display: block;
+
+
+        .img {
+            &__desktop {
+                @media only screen and (max-width: 1024px) {
+                    display: none;
+                }
             }
-        }
 
-        .img__tablet {
-            display: none;
-
-            @media only screen and (max-width: 1024px) {
-                display: block;
-            }
-        }
-
-        .img__desktop {
-            @media only screen and (max-width: 1024px) {
+            &__tablet {
                 display: none;
+
+                @media only screen and (max-width: 1024px) {
+                    display: block;
+                }
+
+                @media only screen and (max-width: 550px) {
+                    display: none;
+                }
+            }
+
+            &__mob {
+                display: none;
+
+                @media only screen and (max-width: 550px) {
+                    display: block;
+                }
             }
         }
 
@@ -141,6 +155,10 @@
 
                 @media only screen and (max-width: 1024px) {
                     justify-content: center;
+                }
+
+                @media only screen and (max-width: 550px) {
+                    margin: 20px 0 30px -10px;
                 }
             }
 
@@ -164,15 +182,37 @@
 
             @media only screen and (max-width: 1024px) {
                 max-width: 770px;
+                padding-bottom: 40px;
+            }
+
+            @media only screen and (max-width: 550px) {
+                padding-top: 180px;
             }
         }
 
         .btn__transparent {
             margin: 5px auto 32px;
+
+            @media only screen and (max-width: 550px) {
+                margin: 30px auto 0;
+            }
         }
 
         .block__text-half {
             max-width: 450px;
+
+            p {
+                font-size: 16px;
+                line-height: 23px;
+            }
+
+            @media only screen and (max-width: 1024px) {
+                max-width: 433px;
+
+                p {
+                    padding: 26px 0;
+                }
+            }
         }
 
         .three-col {
@@ -182,6 +222,10 @@
 
             &__item {
                 margin: 0 20px 20px;
+
+                @media only screen and (max-width: 550px) {
+                    margin: 0 20px;
+                }
             }
         }
     }
@@ -191,6 +235,15 @@
 
         .section__wrapper {
             padding-top: 80px;
+
+            @media only screen and (max-width: 1024px) {
+                padding-bottom: 26px;
+            }
+
+            @media only screen and (max-width: 550px) {
+                padding-top: 20px;
+                margin: 30px auto 0;
+            }
         }
     }
 
@@ -204,6 +257,15 @@
             padding-bottom: 0;
             background: #201c33;
         }
+
+        h4 {
+            font-weight: normal;
+            font-size: 20px;
+            line-height: 26px;
+            text-align: center;
+            color: #F4F2FF;
+            letter-spacing: 0.6px;
+        }
     }
     
     &-brands {
@@ -215,6 +277,15 @@
             max-width: 1265px;
             padding-top: 270px;
             padding-bottom: 110px;
+
+            @media only screen and (max-width: 1024px) {
+                padding-top: 195px;
+                padding-bottom: 45px;
+            }
+
+            @media only screen and (max-width: 550px) {
+                padding-top: 188px;
+            }
         }
 
         .block__row {
@@ -232,11 +303,28 @@
 
             &:first-of-type {
                 max-width: 338px;
+
+                @media only screen and (max-width: 1024px) {
+                    max-width: 450px;
+                    max-width: 550px;
+                    margin: auto;
+                }
             }
             
             &-top {
                 display: block;
                 margin-bottom: 10px;
+
+                @media only screen and (max-width: 1024px) {
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: center;
+                    align-items: center;
+                }
+
+                @media only screen and (max-width: 550px) {
+                    margin-bottom: 0;
+                }
 
                 img {
                     display: block;
@@ -245,6 +333,13 @@
 
                     @media (max-width: 991px) {
                         //margin: auto;
+                        order: 2;
+                        transform: translateX(0px);
+                        margin: 0 10px 23px;
+                    }
+
+                    @media only screen and (max-width: 550px) {
+                        margin: 0 ;
                     }
                 }
             }
@@ -252,6 +347,10 @@
 
         p {
             text-align: left;
+
+            @media only screen and (max-width: 550px) {
+                text-align: center;
+            }
         }
     }
 }
@@ -299,6 +398,10 @@
             min-height: 145px;
             margin-bottom: 10px;
             text-align: center;
+
+            @media only screen and (max-width: 550px) {
+                min-height: 140px;
+            }
         }
 
         &-title {
@@ -315,6 +418,14 @@
             font-size: 16px;
             line-height: 23px;
             text-align: center !important;
+
+            @media only screen and (max-width: 1024px) {
+                padding: 21px 0 8px;
+            }
+
+            @media only screen and (max-width: 550px) {
+                padding: 14px 0 8px;
+            }
         }
     }
 }
@@ -333,7 +444,12 @@
 
         @media only screen and (max-width: 1024px) {
             position: relative;
-            transform: translate(0px, -44px);
+            transform: translate(0, -44px);
+        }
+
+        @media only screen and (max-width: 550px) {
+            padding-top: 15px;
+            transform: translate(0, 0);
         }
     }
 }
@@ -341,6 +457,7 @@
 .section__features {
     &-build {
         background: #201C33;
+        z-index: 1;
 
         .section__wrapper {
             max-width: 520px;
@@ -348,6 +465,10 @@
 
             @media only screen and (max-width: 1150px) {
                 padding: 97px 0 91px;
+            }
+
+            @media only screen and (max-width: 1024px) {
+                padding: 97px 0 110px;
             }
 
             p {
@@ -391,6 +512,15 @@
         width: 100%;
         max-width: 1206px;
         padding: 42px 0 0;
+
+        @media only screen and (max-width: 1024px) {
+            padding: 34px 0 0;
+        }
+
+        @media only screen and (max-width: 550px) {
+            flex-wrap: wrap;
+            padding: 15px 0 0;
+        }
     }
 
     &-item {
@@ -399,6 +529,10 @@
         max-width: 280px;
         margin: 0 20px 50px;
         text-align: center;
+
+        @media only screen and (max-width: 550px) {
+            margin: 0 20px 20px;
+        }
 
         span {
             display: block;
@@ -420,6 +554,14 @@
 
     &-bg {
         margin-bottom: 78px;
+
+        @media only screen and (max-width: 1024px) {
+            margin-bottom: 50px;
+        }
+
+        @media only screen and (max-width: 550px) {
+            margin-bottom: 25px;
+        }
     }
 }
 
@@ -432,6 +574,10 @@
         justify-content: center;
         justify-content: space-evenly;
         padding-top: 17px;
+
+        @media only screen and (max-width: 1024px) {
+            margin-bottom: -125px;
+        }
     }
 
     &__card {
@@ -444,6 +590,17 @@
         background-repeat: no-repeat;
         background-size: contain;
         overflow: hidden;
+
+        @media only screen and (max-width: 1024px) {
+            margin: 40px 40px 10px;
+        }
+
+        @media only screen and (max-width: 550px) {
+            min-width: unset;
+            width: 100%;
+            max-width: 367px;
+            margin: 40px 0 10px;
+        }
 
         &-tftactics {
             background-image:  url("../img/home/teamfight-tactics-release.png");
@@ -477,6 +634,12 @@
             min-width: 202px;
             width: 202px;
             margin-right: 38px;
+
+            @media only screen and (max-width: 550px) {
+                width: 184px;
+                min-width: unset;
+                margin-right: 10px;
+            }
 
             p {
                 padding: 9px 0;
@@ -539,13 +702,27 @@
         -ms-grid-rows: auto auto auto;
         grid-template-rows: auto auto auto;
 
-        @media (max-width: 991px) {
+        @media only screen and (max-width: 1024px) {
             margin-top: 80px;
             margin-left: 0;
             -webkit-box-align: center;
             -webkit-align-items: center;
             -ms-flex-align: center;
             align-items: center;
+        }
+
+
+        @media only screen and (max-width: 550px) {
+            grid-auto-flow: row;
+            grid-auto-columns: 1fr;
+            grid-column-gap: -1px;
+            grid-row-gap: 31px;
+            grid-column-gap: 10px;
+            -ms-grid-columns: 2.3fr 2.3fr;
+            grid-template-columns: 2.3fr 2.3fr;
+            -ms-grid-rows: auto auto auto;
+            grid-template-rows: auto auto;
+            margin-top: 32px;
         }
     }
 }
