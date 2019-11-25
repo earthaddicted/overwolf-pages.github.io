@@ -1,1 +1,242 @@
-"use strict";var searchParams=new URLSearchParams(window.location.search),jobUID=searchParams.get("uid"),comeetToken="1B16C4BD7005131B1A26F391B1",comeetID="B1.001",jobDetailsUrl="https://www.comeet.co/careers-api/2.0/company/".concat(comeetID,"/positions/").concat(jobUID,"?token=").concat(comeetToken,"&details=true");function fetchJobDetails(){fetch(jobDetailsUrl).then((function(e){e.ok&&e.json().then((function(e){return insertJobDetails(e)}))}))}function insertJobDetails(e){if(jobUID){var t=document.getElementById("job-title"),n=document.getElementById("job-info"),o=document.getElementById("job-details"),c=document.getElementById("mailto"),a="";t.innerHTML=e.name,n.innerHTML=getJobInfoTemplate(e),e.details.forEach((function(e){e.value?(e.value=e.value.replace(/(<p><br><\/p>)+/g,""),a+="<h3>".concat(e.name,"</h3> ").concat(e.value)):a=""})),o.innerHTML=a,c.href="mailto:".concat(e.email),c.innerText=e.email}else window.location.replace("/career_template.html")}function getJobInfoTemplate(e){var t="";e.location&&"IL"===e.location.country&&(t="Israel");var n=e.location?e.location.city:"",o=n||t?'<span class="jobs__location">'.concat(n,", ").concat(t,"</span>"):"";return e.employment_type=e.employment_type?e.employment_type:"Full-time",e.experience_level=e.experience_level?'<span class="jobs__level">'.concat(e.experience_level,"</span>"):"","\n                    ".concat(o,'\n                    <span class="jobs__type">\n                        ').concat(e.employment_type,"\n                    </span>\n                     ").concat(e.experience_level)}fetchJobDetails(),window.OW=window.OW||{},OW.careers={filesAllowed:[".pdf",".doc",".docx"],initForm:function(){var e=this,t=document.getElementById("apply-form");t&&(document.querySelectorAll(".error").forEach((function(e){e.addEventListener("click",(function(e){e.target.innerText=""}))})),t.addEventListener("submit",(function(n){return n.preventDefault(),e.checkForFile(t)&&e.formSend(t),!1})),this.initFileUpload())},formSend:function(e){var t=this,n="https://www.comeet.co/careers-api/1.0/company/B1.001/positions/".concat(jobUID,"/apply?token=1B16C4BD7005131B1A26F391B1");return document.getElementById("apply-form-error").innerText="",fetch(n,{body:new FormData(e),cache:"no-cache",method:"POST"}).then((function(e){e.ok?t.onFormSuccess():e.json().then((function(e){return t.onFormError(e.message)}))})),!1},onFormSuccess:function(){document.getElementById("apply-form").style.display="none",document.getElementById("form-success").style.display="flex"},onFormError:function(e){document.getElementById("apply-form-error").innerText=e},checkForFile:function(){var e=document.getElementById("file-upload"),t=document.getElementById("upload-error"),n=document.getElementById("upload-input");return!(!n.files||!n.files[0])||(e.classList.add("empty"),t.innerText="Please add a file",t.classList.add("show"),window.setTimeout((function(){t.classList.remove("show")}),3e3),n.focus(),!1)},initFileUpload:function(){var e=this,t=document.getElementById("file-upload"),n=document.getElementById("upload-error"),o=document.getElementById("file-target"),c=document.getElementById("file-name"),a=document.getElementById("remove-file"),i=document.getElementById("upload-input");i.addEventListener("change",(function(){if(!(i&&i.files&&i.files[0]))return!1;for(var a=i.files[0].name,s=!1,l=0;l<e.filesAllowed.length;l++)a.indexOf(e.filesAllowed[l])>-1&&(s=!0);return n.classList.remove("show"),o.classList.remove("active"),s?(c.innerText=a,t.classList.remove("empty")):(t.classList.add("empty"),i.val(""),n.innerText="Unsupported format",n.classList.add("show"),window.setTimeout((function(){n.classList.remove("show")}),3e3)),!1})),a.addEventListener("click",(function(){n.classList.remove("show"),c.innerText="",o.classList.remove("active"),t.classList.add("empty"),i.val("")})),o.addEventListener("dragenter",(function(){o.classList.add("active")})),o.addEventListener("dragover",(function(){o.classList.add("active")})),o.addEventListener("blur",(function(){o.classList.remove("active")})),o.addEventListener("dragleave",(function(){o.classList.remove("active")})),i.addEventListener("focus",(function(){o.classList.add("active")})),i.addEventListener("blur",(function(){o.classList.remove("active")}))}},OW.careers.initForm();
+const searchParams = new URLSearchParams(window.location.search);
+const jobUID = searchParams.get('uid');
+const comeetToken = '1B16C4BD7005131B1A26F391B1';
+const comeetID = 'B1.001';
+const jobDetailsUrl = `https://www.comeet.co/careers-api/2.0/company/${comeetID}/positions/${jobUID}?token=${comeetToken}&details=true`;
+
+fetchJobDetails();
+
+function fetchJobDetails() {
+    fetch(jobDetailsUrl)
+        .then(jobResponse => {
+            if(jobResponse.ok) {
+                jobResponse.json().then(jobDetails =>insertJobDetails(jobDetails));
+            }
+        });
+}
+
+
+function insertJobDetails(jobDetails) {
+    if(!jobUID) {
+        window.location.replace('/career_template.html');
+        return;
+    }
+    const jobTitleElement = document.getElementById('job-title');
+    const jobInfoElement = document.getElementById('job-info');
+    const jobDetailsElement = document.getElementById('job-details');
+    const mailtoElement = document.getElementById('mailto');
+    let jobDetailsHtml = "";
+
+
+    jobTitleElement.innerHTML = jobDetails.name;
+    jobInfoElement.innerHTML = getJobInfoTemplate(jobDetails);
+    jobDetails.details.forEach(detailsPart => {
+        if(detailsPart.value) {
+            detailsPart.value = detailsPart.value.replace(/(<p><br><\/p>)+/g, '');
+            jobDetailsHtml += `<h3>${detailsPart.name}</h3> ${detailsPart.value}`;
+        } else {
+            jobDetailsHtml = '';
+        }
+    });
+    jobDetailsElement.innerHTML = jobDetailsHtml;
+    mailtoElement.href = `mailto:${jobDetails.email}`;
+    mailtoElement.innerText = jobDetails.email;
+}
+
+function getJobInfoTemplate(job) {
+    let country = '';
+    if(job.location && job.location.country === 'IL') {
+        country = 'Israel';
+    }
+    const city = job.location ? job.location.city : '';
+    const locationElement = city || country ? `<span class="jobs__location">${city}, ${country}</span>` : '';
+    job.employment_type = job.employment_type ? job.employment_type : "Full-time";
+    job.experience_level = job.experience_level ? `<span class="jobs__level">${job.experience_level}</span>` : '';
+    return `
+                    ${locationElement}
+                    <span class="jobs__type">
+                        ${job.employment_type}
+                    </span>
+                     ${job.experience_level}`
+}
+
+//Apply form methods:
+
+window.OW = window.OW || {};
+
+OW.careers = {
+    filesAllowed : ['.pdf', '.doc', '.docx'],
+    initForm: function() {
+        const formElement = document.getElementById('apply-form');
+        if ( ! formElement )
+            return;
+
+        const errorMsgElements = document.querySelectorAll('.err-msg');
+        errorMsgElements.forEach(errEl => {
+            const formField = errEl.previousElementSibling;
+            formField.addEventListener('focus', () => {
+                errEl.textContent = '';
+                errEl.style.display = 'none';
+            });
+        });
+
+
+        formElement.addEventListener('submit', (event) => {
+            event.preventDefault();
+            const formValid = this.formValidation(formElement);
+            if ( formValid )
+                this.formSend(formElement);
+
+            return false;
+        });
+
+        this.initFileUpload();
+    },
+    formSend: function(form) {
+        var url = `https://www.comeet.co/careers-api/1.0/company/B1.001/positions/${jobUID}/apply?token=1B16C4BD7005131B1A26F391B1`;
+
+        document.getElementById('apply-form-error').innerText = '';
+
+        fetch(url, {
+            body: new FormData(form),
+            cache: 'no-cache',
+            method: 'POST',
+        }).then(sendFormResponse => {
+            if(sendFormResponse.ok) {
+                this.onFormSuccess();
+            } else {
+                sendFormResponse.json().then(sendFormJson=>this.onFormError(sendFormJson.message));
+            }
+        });
+
+        return false;
+    },
+    onFormSuccess: function() {
+        document.getElementById('apply-form').style.display = 'none';
+        document.getElementById('form-success').style.display = 'flex';
+    },
+    onFormError: function(message) {
+        document.getElementById('apply-form-error').innerText = message;
+    },
+    checkForFile: function() {
+        const fileInput	=document.getElementById('upload-input');
+
+        if ( fileInput.files && fileInput.files[0] )
+            return true;
+        fileInput.focus();
+
+        return false;
+    },
+
+    formValidation: function() {
+        const errorMessages = {
+            empty: 'Please fill out this field',
+            wrongEmail: 'Please enter a valid email',
+            noFile: 'Please add a file',
+        };
+        const emailRegEx = /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
+        const name = document.getElementsByName('full_name')[0];
+        const email = document.getElementsByName('email')[0];
+        const phone = document.getElementsByName('phone')[0];
+        const source = document.getElementsByName('comment-about')[0];
+        const cv = document.getElementsByName('cv')[0];
+
+        if(!name.value) {
+            this.setError(name, errorMessages.empty);
+            return false;
+        }
+
+        if(!email.value) {
+            this.setError(email, errorMessages.empty);
+            return false;
+        }
+
+        if(!emailRegEx.test(email.value.toLowerCase())) {
+            this.setError(email, errorMessages.wrongEmail);
+            return false;
+        }
+
+        if(!phone.value) {
+            this.setError(phone, errorMessages.empty);
+            return false;
+        }
+
+        if(!source.value) {
+            this.setError(source, errorMessages.empty);
+            return false;
+        }
+
+        if(!cv.files || !cv.files[0] ) {
+            this.setError(cv, errorMessages.noFile);
+            return false;
+        }
+
+        return true;
+    },
+
+    setError: function(element, message) {
+        const errorEl = element.nextElementSibling;
+        errorEl.textContent = message;
+        errorEl.style.display = 'inline-block';
+        element.scrollIntoView();
+    },
+
+    initFileUpload: function() {
+        const fileUploadEl		= document.getElementById('file-upload'),
+            errorEl	= document.getElementById('upload-error'),
+            fileTargetEl = document.getElementById('file-target'),
+            fileNameEl = document.getElementById('file-name'),
+            removeFileEl = document.getElementById('remove-file'),
+            fileInput	=document.getElementById('upload-input');
+
+        fileInput.addEventListener('change', () => {
+            if ( !(fileInput && fileInput.files && fileInput.files[0]) )
+                return false;
+
+            let filename = fileInput.files[0].name,
+                allowed = false;
+            for ( let i = 0; i < this.filesAllowed.length; i++ ) {
+                if ( filename.indexOf(this.filesAllowed[i]) > -1 )
+                    allowed = true;
+            }
+
+            fileTargetEl.classList.remove('active');
+
+            if ( allowed ) {
+                fileNameEl.innerText = filename;
+                fileUploadEl.classList.remove('empty');
+            } else {
+                this.setError(fileInput, 'Unsupported format');
+                fileUploadEl.classList.add('empty');
+                fileInput.val = '';
+                fileInput.type = 'text';
+                fileInput.type = 'file';
+            }
+
+            return false;
+        });
+
+        removeFileEl.addEventListener('click', () => {
+            errorEl.classList.remove('show');
+            fileNameEl.innerText = '';
+            fileTargetEl.classList.remove('active');
+            fileUploadEl.classList.add('empty');
+            fileInput.val('');
+        });
+
+        fileTargetEl.addEventListener('dragenter', () => {fileTargetEl.classList.add('active');});
+        fileTargetEl.addEventListener('dragover', () => {fileTargetEl.classList.add('active');});
+
+        fileTargetEl.addEventListener('blur', () => {fileTargetEl.classList.remove('active');});
+        fileTargetEl.addEventListener('dragleave', () => {fileTargetEl.classList.remove('active');});
+
+        fileInput.addEventListener('focus', () => {fileTargetEl.classList.add('active');});
+
+        fileInput.addEventListener('blur', () => {fileTargetEl.classList.remove('active');});
+    }
+};
+
+OW.careers.initForm();
+
+
+//input validation msg
